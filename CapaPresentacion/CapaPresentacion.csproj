@@ -58,6 +58,12 @@
     <Compile Include="formCategoria.Designer.cs">
       <DependentUpon>formCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMantenedorMozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMantenedorMozo.Designer.cs">
+      <DependentUpon>FormMantenedorMozo.cs</DependentUpon>
+    </Compile>
     <Compile Include="formMetodoPago.cs">
       <SubType>Form</SubType>
     </Compile>

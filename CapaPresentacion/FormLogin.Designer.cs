@@ -82,6 +82,8 @@
             this.txtContrasenia.Size = new System.Drawing.Size(331, 15);
             this.txtContrasenia.TabIndex = 3;
             this.txtContrasenia.Text = "CONTRASEÑA";
+            this.txtContrasenia.Enter += new System.EventHandler(this.txtContrasenia_Enter);
+            this.txtContrasenia.Leave += new System.EventHandler(this.txtContrasenia_Leave);
             // 
             // txtUsuario
             // 
@@ -95,6 +97,8 @@
             this.txtUsuario.Size = new System.Drawing.Size(331, 15);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // btnAcceder
             // 
@@ -111,6 +115,7 @@
             this.btnAcceder.TabIndex = 1;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // pictureBox2
             // 

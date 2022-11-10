@@ -132,7 +132,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 244);
             this.Name = "FormInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormInicio";
+            this.Text = "Inicio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

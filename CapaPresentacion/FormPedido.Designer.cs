@@ -157,6 +157,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.panel4.BackgroundImage = global::CapaPresentacion.Properties.Resources.imagenPedido;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.button2);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;

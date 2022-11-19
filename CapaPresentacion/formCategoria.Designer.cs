@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCategoria));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCodigoCategoria = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
@@ -38,16 +39,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnModificarCategoria = new System.Windows.Forms.Button();
+            this.btnEliminarCategoria = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnEliminarCategoria);
+            this.groupBox1.Controls.Add(this.btnModificarCategoria);
+            this.groupBox1.Controls.Add(this.btnAgregarCategoria);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,8 +72,17 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 66);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(376, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(376, 139);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.etiqueta;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 69);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // txtCodigoCategoria
             // 
@@ -79,14 +94,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnAgregarCategoria);
             this.panel1.Controls.Add(this.txtNombreCategoria);
             this.panel1.Controls.Add(this.txtCodigoCategoria);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(195, 12);
+            this.panel1.Location = new System.Drawing.Point(201, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 266);
+            this.panel1.Size = new System.Drawing.Size(285, 205);
             this.panel1.TabIndex = 4;
             // 
             // btnAgregarCategoria
@@ -95,9 +109,9 @@
             this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(69, 209);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(34, 213);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(149, 37);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(105, 37);
             this.btnAgregarCategoria.TabIndex = 5;
             this.btnAgregarCategoria.Text = "AGREGAR";
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
@@ -143,14 +157,44 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // btnModificarCategoria
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.etiqueta;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 69);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnModificarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnModificarCategoria.Location = new System.Drawing.Point(161, 213);
+            this.btnModificarCategoria.Name = "btnModificarCategoria";
+            this.btnModificarCategoria.Size = new System.Drawing.Size(105, 37);
+            this.btnModificarCategoria.TabIndex = 5;
+            this.btnModificarCategoria.Text = "MODIFICAR";
+            this.btnModificarCategoria.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarCategoria
+            // 
+            this.btnEliminarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(282, 214);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(105, 37);
+            this.btnEliminarCategoria.TabIndex = 5;
+            this.btnEliminarCategoria.Text = "ELIMINAR";
+            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(52, 241);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(105, 37);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // formCategoria
             // 
@@ -160,16 +204,17 @@
             this.ClientSize = new System.Drawing.Size(912, 299);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "formCategoria";
             this.Text = "formCategoria";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,5 +230,8 @@
         private System.Windows.Forms.TextBox txtNombreCategoria;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnEliminarCategoria;
+        private System.Windows.Forms.Button btnModificarCategoria;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

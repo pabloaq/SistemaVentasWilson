@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class formMetodoPago : Form
+    public partial class formComprobantePago : Form
     {
         int x = 0, y = 0;
-        public formMetodoPago()
+        public formComprobantePago()
         {
             InitializeComponent();
         }
@@ -23,6 +23,23 @@ namespace CapaPresentacion
             this.Close();
         }
 
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (txtCodigoCom.Text=="1")
+            {
+                txtCodigoCom.Text = "";
+                txtCodigoCom.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtCodigoCom_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoCom.Text == "")
+            {
+                txtCodigoCom.Text = "1";
+                txtCodigoCom.ForeColor = Color.Gray;
+            }
+        }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {

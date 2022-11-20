@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entCategoriaProducto.cs" />
+    <Compile Include="entDatallePedido.cs" />
     <Compile Include="entPedido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -38,6 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbPedidoId = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -45,16 +47,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cbxProductoId = new System.Windows.Forms.ComboBox();
+            this.cmbProductoId = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbMonto = new System.Windows.Forms.Label();
             this.btnPedir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbxPedidoId = new System.Windows.Forms.ComboBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.dgvDetPedido = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -173,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.btnLimpiar);
-            this.panel7.Controls.Add(this.cbxPedidoId);
+            this.panel7.Controls.Add(this.cmbPedidoId);
             this.panel7.Controls.Add(this.btnEliminar);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.btnModificar);
@@ -181,11 +181,37 @@
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.btnAgregar);
-            this.panel7.Controls.Add(this.cbxProductoId);
+            this.panel7.Controls.Add(this.cmbProductoId);
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(255, 196);
             this.panel7.TabIndex = 11;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLimpiar.Location = new System.Drawing.Point(173, 35);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(68, 24);
+            this.btnLimpiar.TabIndex = 18;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // cmbPedidoId
+            // 
+            this.cmbPedidoId.BackColor = System.Drawing.SystemColors.Menu;
+            this.cmbPedidoId.FormattingEnabled = true;
+            this.cmbPedidoId.Location = new System.Drawing.Point(11, 38);
+            this.cmbPedidoId.Name = "cmbPedidoId";
+            this.cmbPedidoId.Size = new System.Drawing.Size(150, 21);
+            this.cmbPedidoId.TabIndex = 17;
             // 
             // btnEliminar
             // 
@@ -202,6 +228,7 @@
             this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label8
             // 
@@ -230,6 +257,7 @@
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // nudCantidad
             // 
@@ -293,22 +321,16 @@
             this.btnAgregar.TabIndex = 13;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // cbxProductoId
+            // cmbProductoId
             // 
-            this.cbxProductoId.BackColor = System.Drawing.SystemColors.Menu;
-            this.cbxProductoId.FormattingEnabled = true;
-            this.cbxProductoId.Items.AddRange(new object[] {
-            "1/8 Pollo",
-            "1/4 Pollo",
-            "1/2 Pollo",
-            "1 Pollo",
-            "Porción de Papas",
-            "Porción de Ensalada"});
-            this.cbxProductoId.Location = new System.Drawing.Point(11, 93);
-            this.cbxProductoId.Name = "cbxProductoId";
-            this.cbxProductoId.Size = new System.Drawing.Size(160, 21);
-            this.cbxProductoId.TabIndex = 12;
+            this.cmbProductoId.BackColor = System.Drawing.SystemColors.Menu;
+            this.cmbProductoId.FormattingEnabled = true;
+            this.cmbProductoId.Location = new System.Drawing.Point(11, 93);
+            this.cmbProductoId.Name = "cmbProductoId";
+            this.cmbProductoId.Size = new System.Drawing.Size(160, 21);
+            this.cmbProductoId.TabIndex = 12;
             // 
             // panel5
             // 
@@ -321,7 +343,7 @@
             this.panel5.Controls.Add(this.lbMonto);
             this.panel5.Controls.Add(this.btnPedir);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Controls.Add(this.dgvDetPedido);
             this.panel5.Location = new System.Drawing.Point(255, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(478, 336);
@@ -393,47 +415,16 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "lista Detalle Pedido";
             // 
-            // dataGridView1
+            // dgvDetPedido
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvDetPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 233);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // cbxPedidoId
-            // 
-            this.cbxPedidoId.BackColor = System.Drawing.SystemColors.Menu;
-            this.cbxPedidoId.FormattingEnabled = true;
-            this.cbxPedidoId.Items.AddRange(new object[] {
-            "1/8 Pollo",
-            "1/4 Pollo",
-            "1/2 Pollo",
-            "1 Pollo",
-            "Porción de Papas",
-            "Porción de Ensalada"});
-            this.cbxPedidoId.Location = new System.Drawing.Point(11, 38);
-            this.cbxPedidoId.Name = "cbxPedidoId";
-            this.cbxPedidoId.Size = new System.Drawing.Size(150, 21);
-            this.cbxPedidoId.TabIndex = 17;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLimpiar.Location = new System.Drawing.Point(173, 35);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(68, 24);
-            this.btnLimpiar.TabIndex = 18;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.dgvDetPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetPedido.Location = new System.Drawing.Point(6, 55);
+            this.dgvDetPedido.Name = "dgvDetPedido";
+            this.dgvDetPedido.Size = new System.Drawing.Size(467, 233);
+            this.dgvDetPedido.TabIndex = 0;
+            this.dgvDetPedido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetPedido_CellDoubleClick);
             // 
             // FormDetallePedido
             // 
@@ -445,6 +436,7 @@
             this.MaximumSize = new System.Drawing.Size(773, 454);
             this.MinimumSize = new System.Drawing.Size(773, 454);
             this.Name = "FormDetallePedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle Pedido";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -458,7 +450,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetPedido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,15 +473,15 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox cbxProductoId;
+        private System.Windows.Forms.ComboBox cmbProductoId;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbMonto;
         private System.Windows.Forms.Button btnPedir;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDetPedido;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.ComboBox cbxPedidoId;
+        private System.Windows.Forms.ComboBox cmbPedidoId;
     }
 }

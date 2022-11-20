@@ -33,19 +33,19 @@ namespace CapaLogica
         }
 
         //-----------------------------Insertar----------------------------------
-        public void InsertaPedido(entDetallePedido detPedido)
+        public void InsertaDetallePedido(entDetallePedido detPedido)
         {
             datDetallePedido.Instancia.InsertarDetallePedido(detPedido);
         }
 
         //-----------------------------editar----------------------------------
-        public void EditaPedido(entDetallePedido detPedido)
+        public void EditaDetallePedido(entDetallePedido detPedido)
         {
             datDetallePedido.Instancia.EditarDetallePedido(detPedido);
         }
 
         //-----------------------------deshabiliar----------------------------------
-        public void DeshabilitarPedido(entDetallePedido detPedido)
+        public void eliminarDetallePedido(entDetallePedido detPedido)
         {
             datDetallePedido.Instancia.EliminarDetallePedido(detPedido);
         }

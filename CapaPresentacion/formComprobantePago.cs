@@ -41,6 +41,7 @@ namespace CapaPresentacion
             }
         }
 
+
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)

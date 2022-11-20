@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class FormMantenedorMozo : Form
+    public partial class FormCategoriaMetodoPago : Form
     {
-        public FormMantenedorMozo()
+        public FormCategoriaMetodoPago()
         {
             InitializeComponent();
         }

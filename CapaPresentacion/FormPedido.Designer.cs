@@ -104,6 +104,7 @@
             this.btnAtras.TabIndex = 0;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // panel3
             // 
@@ -198,7 +199,6 @@
             // 
             this.txtPedidoID.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPedidoID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPedidoID.Enabled = false;
             this.txtPedidoID.Location = new System.Drawing.Point(8, 29);
             this.txtPedidoID.Name = "txtPedidoID";
             this.txtPedidoID.Size = new System.Drawing.Size(212, 20);
@@ -280,6 +280,7 @@
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label10
             // 
@@ -304,6 +305,7 @@
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.Size = new System.Drawing.Size(454, 146);
             this.dgvPedido.TabIndex = 8;
+            this.dgvPedido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellDoubleClick);
             // 
             // btnAgregar
             // 
@@ -320,6 +322,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -336,6 +339,7 @@
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAceptar
             // 
@@ -352,6 +356,7 @@
             this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // FormPedido
             // 

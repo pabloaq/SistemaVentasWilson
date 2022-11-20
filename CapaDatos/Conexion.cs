@@ -8,7 +8,7 @@ namespace CapaDatos
 
         public static Conexion GetInstancia => instancia;
 
-        //public SqlConnection Conectar => new SqlConnection("Data Source=.;Initial Catalog=dbSistemaVentas;" + "Integrated Security=true;");
-        public SqlConnection Conectar => new SqlConnection("Data Source=DESKTOP-5LS6Q09;Initial Catalog=dbSistemaVentas;" + "Integrated Security=true;");
+        public SqlConnection Conectar => new SqlConnection("Data Source=.;Initial Catalog=dbSistemaVentas;" + "Integrated Security=true;");
+
     }
 }

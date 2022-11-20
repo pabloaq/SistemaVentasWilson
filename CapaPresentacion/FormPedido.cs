@@ -96,12 +96,12 @@ namespace CapaPresentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            //llamar al formulario detalle pedido
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

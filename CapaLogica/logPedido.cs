@@ -14,7 +14,6 @@ namespace CapaLogica
         //Patron Singleton
         // Variable estática para la instancia
         private static readonly logPedido _instancia = new logPedido();
-        private object datCliente;
 
         //privado para evitar la instanciación directa
         public static logPedido Instancia

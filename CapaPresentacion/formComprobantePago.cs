@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaLogica;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +19,7 @@ namespace CapaPresentacion
         public formComprobantePago()
         {
             InitializeComponent();
+            txtCodigoCom.Enabled = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -23,24 +27,29 @@ namespace CapaPresentacion
             this.Close();
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (txtCodigoCom.Text=="1")
-            {
-                txtCodigoCom.Text = "";
-                txtCodigoCom.ForeColor = Color.Gray;
-            }
-        }
 
-        private void txtCodigoCom_Leave(object sender, EventArgs e)
+        private void btnRealizarComprobante_Click(object sender, EventArgs e)
         {
-            if (txtCodigoCom.Text == "")
+            try
             {
-                txtCodigoCom.Text = "1";
-                txtCodigoCom.ForeColor = Color.Gray;
-            }
-        }
+                entComprobante comprobante = new entComprobante();
+                comprobante.PedidoID = Convert.ToInt32(cbxIdPedido.Text);
+                comprobante.MetodopagoID = Convert.ToInt32(cbxMetodoPago.Text);
+                comprobante.LocalID = Convert.ToInt32(cbxIdLocal.Text);
+                comprobante.montoTotal = float.Parse(txtTotal.Text);
 
+                logComprobante.GetInstancia.InsertarDatosComprobante(comprobante);
+                MessageBox.Show("Comprobante generado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el comprobante" + ex);
+            }
+
+           // LimpiarVariables();
+            //gbCliente.Enabled = false;
+            //ListarClientes();
+        }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {

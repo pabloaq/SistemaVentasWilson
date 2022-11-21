@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datCategoriaMetodoPago
+    public class datMantenedorMetodoPago
     {
         #region Instancia
-        private static readonly datCategoriaMetodoPago instancia = new datCategoriaMetodoPago();
-        public static datCategoriaMetodoPago GetInstancia => instancia;
+        private static readonly datMantenedorMetodoPago instancia = new datMantenedorMetodoPago();
+        public static datMantenedorMetodoPago GetInstancia => instancia;
         #endregion Instancia
 
         #region Listar Categoria MetodoPago
-        public List<entCategoriaMetodoPago> ListarCategoriaMetodoPago()
+        public List<entMantenedorMetodoPago> ListarCategoriaMetodoPago()
         {
             SqlCommand cmd = null;
-            List<entCategoriaMetodoPago> lista = new List<entCategoriaMetodoPago>();
+            List<entMantenedorMetodoPago> lista = new List<entMantenedorMetodoPago>();
 
             try
             {
@@ -35,7 +35,7 @@ namespace CapaDatos
 
                 while (reader.Read())
                 {
-                    entCategoriaMetodoPago cate = new entCategoriaMetodoPago
+                    entMantenedorMetodoPago cate = new entMantenedorMetodoPago
                     {
                         CategoriametodopagoID = Convert.ToInt32(reader["CategoriametodopagoID"]),
                         nombre = Convert.ToString(reader["nombreCategoria"]),
@@ -63,7 +63,7 @@ namespace CapaDatos
         #endregion Listar Categoria MetodoPago
 
         #region Agregar Categoria MetodoPago
-        public bool AgregarCategoriaMetodoPago(entCategoriaMetodoPago cate)
+        public bool AgregarCategoriaMetodoPago(entMantenedorMetodoPago cate)
         {
             SqlCommand cmd = null;
 
@@ -98,7 +98,7 @@ namespace CapaDatos
         #endregion Agregar Categoria MetodoPago
 
         #region Modificar Categoria MetodoPago
-        public bool ModificarCategoriaMetodoPago(entCategoriaMetodoPago cate)
+        public bool ModificarCategoriaMetodoPago(entMantenedorMetodoPago cate)
         {
             SqlCommand cmd = null;
             try
@@ -132,7 +132,7 @@ namespace CapaDatos
 
         #region Eliminar Categoria MetodoPago
 
-        public bool EliminarCategoriaMetodoPago(entCategoriaMetodoPago cate)
+        public bool EliminarCategoriaMetodoPago(entMantenedorMetodoPago cate)
         {
             SqlCommand cmd = null;
 

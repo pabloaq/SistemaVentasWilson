@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.lbl_1 = new System.Windows.Forms.Label();
-            this.btn_registrar = new System.Windows.Forms.Button();
+            this.btn_AgregarCatMetodoPago = new System.Windows.Forms.Button();
             this.lbl_2 = new System.Windows.Forms.Label();
-            this.txt_2 = new System.Windows.Forms.TextBox();
+            this.txtNombreCatMetodoPago = new System.Windows.Forms.TextBox();
             this.lbl_3 = new System.Windows.Forms.Label();
-            this.txt_3 = new System.Windows.Forms.TextBox();
-            this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.gb_1 = new System.Windows.Forms.GroupBox();
-            this.dgv_1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gb_1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_1)).BeginInit();
+            this.txtDescripcionCatMetodoPago = new System.Windows.Forms.TextBox();
+            this.btn_ModificarCatMetodoPago = new System.Windows.Forms.Button();
+            this.btn_EliminarCatMetodoPago = new System.Windows.Forms.Button();
+            this.gbListaCatMetodoPago = new System.Windows.Forms.GroupBox();
+            this.dgvCatMetodoPago = new System.Windows.Forms.DataGridView();
+            this.txtCodigoCatMetodoPago = new System.Windows.Forms.TextBox();
+            this.btnAtrasCatMetodoPago = new System.Windows.Forms.Button();
+            this.gbListaCatMetodoPago.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatMetodoPago)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -52,22 +53,21 @@
             this.lbl_1.Size = new System.Drawing.Size(104, 13);
             this.lbl_1.TabIndex = 1;
             this.lbl_1.Text = "Código de categoría";
-            
             // 
-            // btn_registrar
+            // btn_AgregarCatMetodoPago
             // 
-            this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar.ForeColor = System.Drawing.Color.Black;
-            this.btn_registrar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_registrar.Location = new System.Drawing.Point(15, 198);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(86, 34);
-            this.btn_registrar.TabIndex = 2;
-            this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = false;
-            
+            this.btn_AgregarCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btn_AgregarCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarCatMetodoPago.ForeColor = System.Drawing.Color.Black;
+            this.btn_AgregarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_AgregarCatMetodoPago.Location = new System.Drawing.Point(479, 242);
+            this.btn_AgregarCatMetodoPago.Name = "btn_AgregarCatMetodoPago";
+            this.btn_AgregarCatMetodoPago.Size = new System.Drawing.Size(86, 34);
+            this.btn_AgregarCatMetodoPago.TabIndex = 2;
+            this.btn_AgregarCatMetodoPago.Text = "Agregar";
+            this.btn_AgregarCatMetodoPago.UseVisualStyleBackColor = false;
+            this.btn_AgregarCatMetodoPago.Click += new System.EventHandler(this.btn_AgregarCatMetodoPago_Click);
             // 
             // lbl_2
             // 
@@ -79,12 +79,12 @@
             this.lbl_2.TabIndex = 6;
             this.lbl_2.Text = "Nombre";
             // 
-            // txt_2
+            // txtNombreCatMetodoPago
             // 
-            this.txt_2.Location = new System.Drawing.Point(12, 65);
-            this.txt_2.Name = "txt_2";
-            this.txt_2.Size = new System.Drawing.Size(181, 20);
-            this.txt_2.TabIndex = 7;
+            this.txtNombreCatMetodoPago.Location = new System.Drawing.Point(12, 65);
+            this.txtNombreCatMetodoPago.Name = "txtNombreCatMetodoPago";
+            this.txtNombreCatMetodoPago.Size = new System.Drawing.Size(181, 20);
+            this.txtNombreCatMetodoPago.TabIndex = 7;
             // 
             // lbl_3
             // 
@@ -96,104 +96,123 @@
             this.lbl_3.TabIndex = 8;
             this.lbl_3.Text = "Descripción";
             // 
-            // txt_3
+            // txtDescripcionCatMetodoPago
             // 
-            this.txt_3.Location = new System.Drawing.Point(12, 106);
-            this.txt_3.Multiline = true;
-            this.txt_3.Name = "txt_3";
-            this.txt_3.Size = new System.Drawing.Size(273, 75);
-            this.txt_3.TabIndex = 9;
+            this.txtDescripcionCatMetodoPago.Location = new System.Drawing.Point(12, 106);
+            this.txtDescripcionCatMetodoPago.Multiline = true;
+            this.txtDescripcionCatMetodoPago.Name = "txtDescripcionCatMetodoPago";
+            this.txtDescripcionCatMetodoPago.Size = new System.Drawing.Size(273, 120);
+            this.txtDescripcionCatMetodoPago.TabIndex = 9;
             // 
-            // btn_modificar
+            // btn_ModificarCatMetodoPago
             // 
-            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.ForeColor = System.Drawing.Color.Black;
-            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(107, 198);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(86, 34);
-            this.btn_modificar.TabIndex = 18;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_ModificarCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btn_ModificarCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ModificarCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ModificarCatMetodoPago.ForeColor = System.Drawing.Color.Black;
+            this.btn_ModificarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_ModificarCatMetodoPago.Location = new System.Drawing.Point(571, 242);
+            this.btn_ModificarCatMetodoPago.Name = "btn_ModificarCatMetodoPago";
+            this.btn_ModificarCatMetodoPago.Size = new System.Drawing.Size(86, 34);
+            this.btn_ModificarCatMetodoPago.TabIndex = 18;
+            this.btn_ModificarCatMetodoPago.Text = "Modificar";
+            this.btn_ModificarCatMetodoPago.UseVisualStyleBackColor = false;
+            this.btn_ModificarCatMetodoPago.Click += new System.EventHandler(this.btn_ModificarCatMetodoPago_Click);
             // 
-            // btn_eliminar
+            // btn_EliminarCatMetodoPago
             // 
-            this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar.ForeColor = System.Drawing.Color.Black;
-            this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(199, 198);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(86, 34);
-            this.btn_eliminar.TabIndex = 19;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_EliminarCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btn_EliminarCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarCatMetodoPago.ForeColor = System.Drawing.Color.Black;
+            this.btn_EliminarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_EliminarCatMetodoPago.Location = new System.Drawing.Point(663, 242);
+            this.btn_EliminarCatMetodoPago.Name = "btn_EliminarCatMetodoPago";
+            this.btn_EliminarCatMetodoPago.Size = new System.Drawing.Size(86, 34);
+            this.btn_EliminarCatMetodoPago.TabIndex = 19;
+            this.btn_EliminarCatMetodoPago.Text = "Eliminar";
+            this.btn_EliminarCatMetodoPago.UseVisualStyleBackColor = false;
+            this.btn_EliminarCatMetodoPago.Click += new System.EventHandler(this.btn_EliminarCatMetodoPago_Click);
             // 
-            // gb_1
+            // gbListaCatMetodoPago
             // 
-            this.gb_1.Controls.Add(this.dgv_1);
-            this.gb_1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gb_1.Location = new System.Drawing.Point(299, 12);
-            this.gb_1.Name = "gb_1";
-            this.gb_1.Size = new System.Drawing.Size(450, 220);
-            this.gb_1.TabIndex = 20;
-            this.gb_1.TabStop = false;
-            this.gb_1.Text = "Lista de registro";
+            this.gbListaCatMetodoPago.Controls.Add(this.dgvCatMetodoPago);
+            this.gbListaCatMetodoPago.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gbListaCatMetodoPago.Location = new System.Drawing.Point(299, 12);
+            this.gbListaCatMetodoPago.Name = "gbListaCatMetodoPago";
+            this.gbListaCatMetodoPago.Size = new System.Drawing.Size(450, 220);
+            this.gbListaCatMetodoPago.TabIndex = 20;
+            this.gbListaCatMetodoPago.TabStop = false;
+            this.gbListaCatMetodoPago.Text = "Lista de registro";
             // 
-            // dgv_1
+            // dgvCatMetodoPago
             // 
-            this.dgv_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_1.Location = new System.Drawing.Point(6, 16);
-            this.dgv_1.Name = "dgv_1";
-            this.dgv_1.Size = new System.Drawing.Size(438, 198);
-            this.dgv_1.TabIndex = 0;
+            this.dgvCatMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCatMetodoPago.Location = new System.Drawing.Point(6, 16);
+            this.dgvCatMetodoPago.Name = "dgvCatMetodoPago";
+            this.dgvCatMetodoPago.Size = new System.Drawing.Size(438, 198);
+            this.dgvCatMetodoPago.TabIndex = 0;
+            this.dgvCatMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatMetodoPago_CellContentClick);
             // 
-            // textBox1
+            // txtCodigoCatMetodoPago
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 20);
-            this.textBox1.TabIndex = 21;
+            this.txtCodigoCatMetodoPago.Location = new System.Drawing.Point(12, 26);
+            this.txtCodigoCatMetodoPago.Name = "txtCodigoCatMetodoPago";
+            this.txtCodigoCatMetodoPago.Size = new System.Drawing.Size(181, 20);
+            this.txtCodigoCatMetodoPago.TabIndex = 21;
+            // 
+            // btnAtrasCatMetodoPago
+            // 
+            this.btnAtrasCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnAtrasCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtrasCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtrasCatMetodoPago.ForeColor = System.Drawing.Color.Black;
+            this.btnAtrasCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAtrasCatMetodoPago.Location = new System.Drawing.Point(12, 242);
+            this.btnAtrasCatMetodoPago.Name = "btnAtrasCatMetodoPago";
+            this.btnAtrasCatMetodoPago.Size = new System.Drawing.Size(86, 34);
+            this.btnAtrasCatMetodoPago.TabIndex = 22;
+            this.btnAtrasCatMetodoPago.Text = "Atras";
+            this.btnAtrasCatMetodoPago.UseVisualStyleBackColor = false;
             // 
             // FormCategoriaMetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(761, 244);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.gb_1);
-            this.Controls.Add(this.btn_eliminar);
-            this.Controls.Add(this.btn_modificar);
-            this.Controls.Add(this.txt_3);
+            this.ClientSize = new System.Drawing.Size(768, 288);
+            this.Controls.Add(this.btnAtrasCatMetodoPago);
+            this.Controls.Add(this.txtCodigoCatMetodoPago);
+            this.Controls.Add(this.gbListaCatMetodoPago);
+            this.Controls.Add(this.btn_EliminarCatMetodoPago);
+            this.Controls.Add(this.btn_ModificarCatMetodoPago);
+            this.Controls.Add(this.txtDescripcionCatMetodoPago);
             this.Controls.Add(this.lbl_3);
-            this.Controls.Add(this.txt_2);
+            this.Controls.Add(this.txtNombreCatMetodoPago);
             this.Controls.Add(this.lbl_2);
-            this.Controls.Add(this.btn_registrar);
+            this.Controls.Add(this.btn_AgregarCatMetodoPago);
             this.Controls.Add(this.lbl_1);
             this.Name = "FormCategoriaMetodoPago";
             this.Text = "FormCategoriaMetodoPago";
-            
-            this.gb_1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_1)).EndInit();
+            this.gbListaCatMetodoPago.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatMetodoPago)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
         private System.Windows.Forms.Label lbl_1;
-        private System.Windows.Forms.Button btn_registrar;
+        private System.Windows.Forms.Button btn_AgregarCatMetodoPago;
         private System.Windows.Forms.Label lbl_2;
-        private System.Windows.Forms.TextBox txt_2;
+        private System.Windows.Forms.TextBox txtNombreCatMetodoPago;
         private System.Windows.Forms.Label lbl_3;
-        private System.Windows.Forms.TextBox txt_3;
-        private System.Windows.Forms.Button btn_modificar;
-        private System.Windows.Forms.Button btn_eliminar;
-        private System.Windows.Forms.GroupBox gb_1;
-        private System.Windows.Forms.DataGridView dgv_1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcionCatMetodoPago;
+        private System.Windows.Forms.Button btn_ModificarCatMetodoPago;
+        private System.Windows.Forms.Button btn_EliminarCatMetodoPago;
+        private System.Windows.Forms.GroupBox gbListaCatMetodoPago;
+        private System.Windows.Forms.DataGridView dgvCatMetodoPago;
+        private System.Windows.Forms.TextBox txtCodigoCatMetodoPago;
+        private System.Windows.Forms.Button btnAtrasCatMetodoPago;
     }
 }

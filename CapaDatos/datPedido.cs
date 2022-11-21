@@ -49,9 +49,9 @@ namespace CapaDatos
                 }
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw e;
+                Console.WriteLine("Error: " + ex);
             }
             finally
             {

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7402811E-92C9-48C0-8ED8-DC43B378134D}</ProjectGuid>
+    <ProjectGuid>{4E74DB78-6699-4C1B-B1DF-3F0E46240543}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CapaPresentacion</RootNamespace>
     <AssemblyName>CapaPresentacion</AssemblyName>
@@ -46,86 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formCategoria.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formCategoria.Designer.cs">
-      <DependentUpon>formCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCategoriaMetodoPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCategoriaMetodoPago.Designer.cs">
-      <DependentUpon>FormCategoriaMetodoPago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDetallePedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDetallePedido.Designer.cs">
-      <DependentUpon>FormDetallePedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormInicio.Designer.cs">
-      <DependentUpon>FormInicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formComprobantePago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formComprobantePago.Designer.cs">
-      <DependentUpon>formComprobantePago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNotaDeAtencion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNotaDeAtencion.Designer.cs">
-      <DependentUpon>FormNotaDeAtencion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPedido.Designer.cs">
-      <DependentUpon>FormPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MantenedorProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenedorProducto.Designer.cs">
-      <DependentUpon>MantenedorProducto.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formCategoria.resx">
-      <DependentUpon>formCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDetallePedido.resx">
-      <DependentUpon>FormDetallePedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormInicio.resx">
-      <DependentUpon>FormInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formComprobantePago.resx">
-      <DependentUpon>formComprobantePago.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNotaDeAtencion.resx">
-      <DependentUpon>FormNotaDeAtencion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPedido.resx">
-      <DependentUpon>FormPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorProducto.resx">
-      <DependentUpon>MantenedorProducto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,7 +62,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,49 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
-      <Project>{a4dbdfe6-5a28-47f4-98bd-2b6d47fe0b88}</Project>
-      <Name>CapaEntidad</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
-      <Project>{07c1dc6c-9864-4fe7-8eb5-4ad991df4f13}</Project>
-      <Name>CapaLogica</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pllit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pollto.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\efec.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tarj2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sdsd.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\etiqueta.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pollo1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagen1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagen2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagenPedido1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

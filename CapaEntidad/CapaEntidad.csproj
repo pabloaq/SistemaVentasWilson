@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A4DBDFE6-5A28-47F4-98BD-2B6D47FE0B88}</ProjectGuid>
+    <ProjectGuid>{83F60A7A-BDA6-4BCD-89F5-B855313DF523}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaEntidad</RootNamespace>
@@ -41,9 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entCategoriaProducto.cs" />
-    <Compile Include="entDatallePedido.cs" />
-    <Compile Include="entPedido.cs" />
+    <Compile Include="entProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

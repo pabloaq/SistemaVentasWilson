@@ -1,0 +1,11 @@
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Rolando\Desktop\Proyecto MantenedorProducto\CapaLogica\obj\Debug\CapaLogica.pdb

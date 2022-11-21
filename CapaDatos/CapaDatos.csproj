@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE348ACC-95CF-460F-B77F-B7C15DAF9937}</ProjectGuid>
+    <ProjectGuid>{168846B1-B9F2-4711-B39C-6CE98FE04828}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaDatos</RootNamespace>
@@ -42,16 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="datCategoriaProducto.cs" />
-    <Compile Include="datDetallePedido.cs" />
-    <Compile Include="datPedido.cs" />
+    <Compile Include="datProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
-      <Project>{a4dbdfe6-5a28-47f4-98bd-2b6d47fe0b88}</Project>
+      <Project>{83f60a7a-bda6-4bcd-89f5-b855313df523}</Project>
       <Name>CapaEntidad</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

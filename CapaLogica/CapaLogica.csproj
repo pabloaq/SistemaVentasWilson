@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{07C1DC6C-9864-4FE7-8EB5-4AD991DF4F13}</ProjectGuid>
+    <ProjectGuid>{BA955B75-DBFE-45F9-A42E-7F76058AA3F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaLogica</RootNamespace>
@@ -41,18 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="logCategoriaProducto.cs" />
-    <Compile Include="logDetallePedido.cs" />
-    <Compile Include="logPedido.cs" />
+    <Compile Include="logProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
-      <Project>{be348acc-95cf-460f-b77f-b7c15daf9937}</Project>
+      <Project>{168846b1-b9f2-4711-b39c-6ce98fe04828}</Project>
       <Name>CapaDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
-      <Project>{a4dbdfe6-5a28-47f4-98bd-2b6d47fe0b88}</Project>
+      <Project>{83f60a7a-bda6-4bcd-89f5-b855313df523}</Project>
       <Name>CapaEntidad</Name>
     </ProjectReference>
   </ItemGroup>

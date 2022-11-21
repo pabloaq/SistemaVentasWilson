@@ -16,8 +16,8 @@ namespace CapaDatos
         public static datMantenedorMetodoPago GetInstancia => instancia;
         #endregion Instancia
 
-        #region Listar Categoria MetodoPago
-        public List<entMantenedorMetodoPago> ListarCategoriaMetodoPago()
+        #region Listar MetodoPago
+        public List<entMantenedorMetodoPago> ListarMetodoPago()
         {
             SqlCommand cmd = null;
             List<entMantenedorMetodoPago> lista = new List<entMantenedorMetodoPago>();
@@ -26,7 +26,7 @@ namespace CapaDatos
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
 
-                cmd = new SqlCommand("pa_listar_categoria_metodopago", cn);
+                cmd = new SqlCommand("pa_listar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cn.Open();
@@ -37,8 +37,8 @@ namespace CapaDatos
                 {
                     entMantenedorMetodoPago cate = new entMantenedorMetodoPago
                     {
-                        CategoriametodopagoID = Convert.ToInt32(reader["CategoriametodopagoID"]),
-                        nombre = Convert.ToString(reader["nombreCategoria"]),
+                        metodopagoID = Convert.ToInt32(reader["metodopagoID"]),
+                        nombre = Convert.ToString(reader["nombre"]),
                         descripcion = Convert.ToString(reader["descripcion"])
                     };
 
@@ -60,10 +60,10 @@ namespace CapaDatos
 
 
 
-        #endregion Listar Categoria MetodoPago
+        #endregion Listar MetodoPago
 
-        #region Agregar Categoria MetodoPago
-        public bool AgregarCategoriaMetodoPago(entMantenedorMetodoPago cate)
+        #region Agregar MetodoPago
+        public bool AgregarMetodoPago(entMantenedorMetodoPago cate)
         {
             SqlCommand cmd = null;
 
@@ -71,10 +71,10 @@ namespace CapaDatos
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
 
-                cmd = new SqlCommand("pa_insertar_categoria_metodopago", cn);
+                cmd = new SqlCommand("pa_insertar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@CategoriametodopagoID", cate.CategoriametodopagoID);
+                cmd.Parameters.AddWithValue("@metodopagoID", cate.metodopagoID);
                 cmd.Parameters.AddWithValue("@nombre", cate.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", cate.descripcion);
 
@@ -95,17 +95,17 @@ namespace CapaDatos
         }
 
 
-        #endregion Agregar Categoria MetodoPago
+        #endregion Agregar MetodoPago
 
-        #region Modificar Categoria MetodoPago
-        public bool ModificarCategoriaMetodoPago(entMantenedorMetodoPago cate)
+        #region Modificar MetodoPago
+        public bool ModificarMetodoPago(entMantenedorMetodoPago cate)
         {
             SqlCommand cmd = null;
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
 
-                cmd = new SqlCommand("pa_modificar_categoria_metodopago", cn);
+                cmd = new SqlCommand("pa_modificar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@nombre", cate.nombre);
@@ -128,11 +128,11 @@ namespace CapaDatos
         }
 
 
-        #endregion Modificar Categoria MetodoPago
+        #endregion Modificar MetodoPago
 
-        #region Eliminar Categoria MetodoPago
+        #region Eliminar MetodoPago
 
-        public bool EliminarCategoriaMetodoPago(entMantenedorMetodoPago cate)
+        public bool EliminarMetodoPago(entMantenedorMetodoPago cate)
         {
             SqlCommand cmd = null;
 
@@ -140,10 +140,10 @@ namespace CapaDatos
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
 
-                cmd = new SqlCommand("pa_eliminar_categoria_metodopago", cn);
+                cmd = new SqlCommand("pa_eliminar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@CategoriametodopagoID", cate.CategoriametodopagoID);
+                cmd.Parameters.AddWithValue("@metodopagoID", cate.metodopagoID);
 
                 cn.Open();
 
@@ -162,7 +162,7 @@ namespace CapaDatos
             return false;
         }
 
-        #endregion Eliminar Categoria MetodoPago
+        #endregion Eliminar MetodoPago
 
     }
 

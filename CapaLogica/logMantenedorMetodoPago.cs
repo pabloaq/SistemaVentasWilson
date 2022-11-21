@@ -16,28 +16,28 @@ namespace CapaLogica
 
         #endregion Instancia
 
-        #region Listar Categoria MetodoPago
+        #region Listar MetodoPago
 
-        public List<entMantenedorMetodoPago> ListarCategoriasMetodoPago() => datMantenedorMetodoPago.GetInstancia.ListarCategoriaMetodoPago();
+        public List<entMantenedorMetodoPago> ListarMetodoPago() => datMantenedorMetodoPago.GetInstancia.ListarMetodoPago();
 
-        #endregion Listar Categoria MetodoPago
+        #endregion Listar MetodoPago
 
-        #region Agregar Categoria MetodoPago
+        #region Agregar MetodoPago
 
-        public void InsertarCategoriasMetodoPago(entMantenedorMetodoPago cate) => datMantenedorMetodoPago.GetInstancia.AgregarCategoriaMetodoPago(cate);
+        public void InsertarMetodoPago(entMantenedorMetodoPago cate) => datMantenedorMetodoPago.GetInstancia.AgregarMetodoPago(cate);
 
-        #endregion Agregar Categoria MetodoPago
+        #endregion Agregar MetodoPago
 
-        #region Modificar Categoria MetodoPago
+        #region Modificar MetodoPago
 
-        public void ModificarCategoriasMetodoPago(entMantenedorMetodoPago cate) => datMantenedorMetodoPago.GetInstancia.ModificarCategoriaMetodoPago(cate);
+        public void ModificarMetodoPago(entMantenedorMetodoPago cate) => datMantenedorMetodoPago.GetInstancia.ModificarMetodoPago(cate);
 
-        #endregion Modificar Categoria MetodoPago
+        #endregion Modificar MetodoPago
 
-        #region Eliminar Categoria MetodoPago
+        #region Eliminar MetodoPago
 
-        public void EliminarCategoriasMetodoPago(entMantenedorMetodoPago cate) => datMantenedorMetodoPago.GetInstancia.EliminarCategoriaMetodoPago(cate);
+        public void EliminarMetodoPago(entMantenedorMetodoPago cate) => datMantenedorMetodoPago.GetInstancia.EliminarMetodoPago(cate);
 
-        #endregion Eliminar Categoria MetodoPago
+        #endregion Eliminar MetodoPago
     }
 }

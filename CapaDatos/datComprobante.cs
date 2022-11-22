@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace CapaDatos
 {
@@ -56,5 +57,47 @@ namespace CapaDatos
 
         #endregion Datos Comprobante
 
+
+
+        #region Verificar Monto Total
+
+
+        public float VerificarMontoTotal (entComprobante comprobante)
+        {
+
+            SqlCommand cmd = null;
+
+            float total = 0;
+
+            try
+            {
+                SqlConnection cn = Conexion.GetInstancia.Conectar;
+                cmd = new SqlCommand("MontoTotalPago", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@pedido_Id", comprobante.PedidoID);
+                SqlParameter totalPago = new SqlParameter("@TOTAL", 0);
+                totalPago.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(totalPago);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                total = float.Parse(cmd.Parameters["@TOTAL"].Value.ToString());
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return total;
+
+        }
+
+
+        #endregion Verificar Monto Total
     }
 }

@@ -38,8 +38,21 @@ namespace CapaPresentacion
                 comprobante.LocalID = Convert.ToInt32(cbxIdLocal.Text);
                 comprobante.montoTotal = float.Parse(txtTotal.Text);
 
-                logComprobante.GetInstancia.InsertarDatosComprobante(comprobante);
-                MessageBox.Show("Comprobante generado correctamente");
+
+                //MessageBox.Show(logComprobante.GetInstancia.VerificarMontoTotal(comprobante).ToString());
+
+                if (comprobante.montoTotal == logComprobante.GetInstancia.VerificarMontoTotal(comprobante))
+                {
+                    MessageBox.Show("Monto total ha sido verificado correctamente");
+                    logComprobante.GetInstancia.InsertarDatosComprobante(comprobante);
+                    MessageBox.Show("Comprobante generado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("El monto ingresado no coincide con el monto de su pedido");
+
+                }
+            
             }
             catch (Exception ex)
             {

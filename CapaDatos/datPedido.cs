@@ -71,7 +71,6 @@ namespace CapaDatos
                 cmd = new SqlCommand("spInsertaPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombreCliente", Pedido.nombreCliente);
-                cmd.Parameters.AddWithValue("@pedidoId", Pedido.PeidoId);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

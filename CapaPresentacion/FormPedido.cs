@@ -41,7 +41,6 @@ namespace CapaPresentacion
             {
                 entPedido Pedido = new entPedido();
                 Pedido.nombreCliente = txtNombreCiente.Text.Trim();
-                Pedido.PeidoId = Convert.ToInt32(txtPedidoID.Text.Trim());
                 logPedido.Instancia.InsertaPedido(Pedido);
             }
             catch (Exception ex)

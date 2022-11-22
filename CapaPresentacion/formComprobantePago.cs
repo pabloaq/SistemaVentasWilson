@@ -45,6 +45,10 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("Monto total ha sido verificado correctamente");
                     logComprobante.GetInstancia.InsertarDatosComprobante(comprobante);
+                    entPedido pedido = new entPedido();
+                    pedido.estado = 1;
+                    pedido.PeidoId = comprobante.PedidoID;
+                    logPedido.Instancia.DeshabilitarPedido(pedido);
                     MessageBox.Show("Comprobante generado correctamente");
                 }
                 else

@@ -104,7 +104,7 @@ namespace CapaDatos
 
                 cn.Open();
 
-                if(cmd.ExecuteNonQuery > 0) { return true; };
+                if(cmd.ExecuteNonQuery() > 0) { return true; };
 
             }
             catch(Exception ex)

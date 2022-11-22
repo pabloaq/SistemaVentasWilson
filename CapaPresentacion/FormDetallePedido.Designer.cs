@@ -50,8 +50,6 @@
             this.cmbProductoId = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbMonto = new System.Windows.Forms.Label();
             this.btnPedir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDetPedido = new System.Windows.Forms.DataGridView();
@@ -339,8 +337,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.lbMonto);
             this.panel5.Controls.Add(this.btnPedir);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.dgvDetPedido);
@@ -359,32 +355,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(388, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "S/.";
-            // 
-            // lbMonto
-            // 
-            this.lbMonto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbMonto.AutoSize = true;
-            this.lbMonto.BackColor = System.Drawing.Color.Transparent;
-            this.lbMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMonto.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbMonto.Location = new System.Drawing.Point(413, 24);
-            this.lbMonto.Name = "lbMonto";
-            this.lbMonto.Size = new System.Drawing.Size(40, 20);
-            this.lbMonto.TabIndex = 5;
-            this.lbMonto.Text = "0.00";
             // 
             // btnPedir
             // 
@@ -476,8 +446,6 @@
         private System.Windows.Forms.ComboBox cmbProductoId;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbMonto;
         private System.Windows.Forms.Button btnPedir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDetPedido;

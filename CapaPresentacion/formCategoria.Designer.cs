@@ -30,20 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCategoria));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnEliminarCategoria = new System.Windows.Forms.Button();
+            this.btnModificarCategoria = new System.Windows.Forms.Button();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
+            this.dgvCategoriaProducto = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCodigoCategoria = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAgregarCategoria = new System.Windows.Forms.Button();
+            this.txtDescripcionCategoria = new System.Windows.Forms.TextBox();
             this.txtNombreCategoria = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnModificarCategoria = new System.Windows.Forms.Button();
-            this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoriaProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,7 +56,7 @@
             this.groupBox1.Controls.Add(this.btnEliminarCategoria);
             this.groupBox1.Controls.Add(this.btnModificarCategoria);
             this.groupBox1.Controls.Add(this.btnAgregarCategoria);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvCategoriaProducto);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -66,42 +68,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "      Lista de Categorias";
             // 
-            // dataGridView1
+            // btnEliminarCategoria
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(376, 139);
-            this.dataGridView1.TabIndex = 1;
+            this.btnEliminarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(282, 214);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(105, 37);
+            this.btnEliminarCategoria.TabIndex = 5;
+            this.btnEliminarCategoria.Text = "ELIMINAR";
+            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
+            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
-            // pictureBox1
+            // btnModificarCategoria
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.etiqueta;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 69);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtCodigoCategoria
-            // 
-            this.txtCodigoCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.txtCodigoCategoria.Location = new System.Drawing.Point(28, 82);
-            this.txtCodigoCategoria.Name = "txtCodigoCategoria";
-            this.txtCodigoCategoria.Size = new System.Drawing.Size(241, 20);
-            this.txtCodigoCategoria.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtNombreCategoria);
-            this.panel1.Controls.Add(this.txtCodigoCategoria);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(201, 47);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 205);
-            this.panel1.TabIndex = 4;
+            this.btnModificarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnModificarCategoria.Location = new System.Drawing.Point(161, 213);
+            this.btnModificarCategoria.Name = "btnModificarCategoria";
+            this.btnModificarCategoria.Size = new System.Drawing.Size(105, 37);
+            this.btnModificarCategoria.TabIndex = 5;
+            this.btnModificarCategoria.Text = "MODIFICAR";
+            this.btnModificarCategoria.UseVisualStyleBackColor = false;
+            this.btnModificarCategoria.Click += new System.EventHandler(this.btnModificarCategoria_Click);
             // 
             // btnAgregarCategoria
             // 
@@ -115,21 +108,82 @@
             this.btnAgregarCategoria.TabIndex = 5;
             this.btnAgregarCategoria.Text = "AGREGAR";
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
+            // 
+            // dgvCategoriaProducto
+            // 
+            this.dgvCategoriaProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.dgvCategoriaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategoriaProducto.Location = new System.Drawing.Point(23, 66);
+            this.dgvCategoriaProducto.Name = "dgvCategoriaProducto";
+            this.dgvCategoriaProducto.Size = new System.Drawing.Size(376, 139);
+            this.dgvCategoriaProducto.TabIndex = 1;
+            this.dgvCategoriaProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoriaProducto_CellContentClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.etiqueta;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 69);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtCodigoCategoria
+            // 
+            this.txtCodigoCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.txtCodigoCategoria.Location = new System.Drawing.Point(28, 47);
+            this.txtCodigoCategoria.Name = "txtCodigoCategoria";
+            this.txtCodigoCategoria.Size = new System.Drawing.Size(241, 20);
+            this.txtCodigoCategoria.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtDescripcionCategoria);
+            this.panel1.Controls.Add(this.txtNombreCategoria);
+            this.panel1.Controls.Add(this.txtCodigoCategoria);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(201, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(285, 205);
+            this.panel1.TabIndex = 4;
+            // 
+            // txtDescripcionCategoria
+            // 
+            this.txtDescripcionCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.txtDescripcionCategoria.Location = new System.Drawing.Point(28, 173);
+            this.txtDescripcionCategoria.Name = "txtDescripcionCategoria";
+            this.txtDescripcionCategoria.Size = new System.Drawing.Size(241, 20);
+            this.txtDescripcionCategoria.TabIndex = 4;
             // 
             // txtNombreCategoria
             // 
             this.txtNombreCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.txtNombreCategoria.Location = new System.Drawing.Point(28, 159);
+            this.txtNombreCategoria.Location = new System.Drawing.Point(28, 112);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(241, 20);
             this.txtNombreCategoria.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(24, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 30);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "    DESCRIPCION";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(24, 125);
+            this.label2.Location = new System.Drawing.Point(24, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 30);
             this.label2.TabIndex = 2;
@@ -141,7 +195,7 @@
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(24, 35);
+            this.label1.Location = new System.Drawing.Point(24, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 34);
             this.label1.TabIndex = 2;
@@ -156,32 +210,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(186, 183);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnModificarCategoria
-            // 
-            this.btnModificarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnModificarCategoria.Location = new System.Drawing.Point(161, 213);
-            this.btnModificarCategoria.Name = "btnModificarCategoria";
-            this.btnModificarCategoria.Size = new System.Drawing.Size(105, 37);
-            this.btnModificarCategoria.TabIndex = 5;
-            this.btnModificarCategoria.Text = "MODIFICAR";
-            this.btnModificarCategoria.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarCategoria
-            // 
-            this.btnEliminarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarCategoria.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(282, 214);
-            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(105, 37);
-            this.btnEliminarCategoria.TabIndex = 5;
-            this.btnEliminarCategoria.Text = "ELIMINAR";
-            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
@@ -210,7 +238,7 @@
             this.Name = "formCategoria";
             this.Text = "formCategoria";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoriaProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -222,7 +250,7 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCategoriaProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCodigoCategoria;
         private System.Windows.Forms.Label label2;
@@ -233,5 +261,7 @@
         private System.Windows.Forms.Button btnEliminarCategoria;
         private System.Windows.Forms.Button btnModificarCategoria;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox txtDescripcionCategoria;
+        private System.Windows.Forms.Label label3;
     }
 }

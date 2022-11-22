@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PagoTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagoTrabajador.Designer.cs">
+      <DependentUpon>PagoTrabajador.cs</DependentUpon>
+    </Compile>
     <Compile Include="formCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formCategoria.Designer.cs">
       <DependentUpon>formCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategoriaMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoriaMetodoPago.Designer.cs">
+      <DependentUpon>FormCategoriaMetodoPago.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDetallePedido.cs">
       <SubType>Form</SubType>
@@ -70,23 +82,11 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMantenedorMozo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMantenedorMozo.Designer.cs">
-      <DependentUpon>FormMantenedorMozo.cs</DependentUpon>
-    </Compile>
     <Compile Include="formComprobantePago.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formComprobantePago.Designer.cs">
       <DependentUpon>formComprobantePago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNotaDeAtencion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNotaDeAtencion.Designer.cs">
-      <DependentUpon>FormNotaDeAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPedido.cs">
       <SubType>Form</SubType>
@@ -105,6 +105,9 @@
     <EmbeddedResource Include="formCategoria.resx">
       <DependentUpon>formCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoriaMetodoPago.resx">
+      <DependentUpon>FormCategoriaMetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDetallePedido.resx">
       <DependentUpon>FormDetallePedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,14 +120,14 @@
     <EmbeddedResource Include="formComprobantePago.resx">
       <DependentUpon>formComprobantePago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNotaDeAtencion.resx">
-      <DependentUpon>FormNotaDeAtencion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorProducto.resx">
       <DependentUpon>MantenedorProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoTrabajador.resx">
+      <DependentUpon>PagoTrabajador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

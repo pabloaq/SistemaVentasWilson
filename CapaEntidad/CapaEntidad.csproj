@@ -41,7 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entCategoriaMetodoPago.cs" />
+    <Compile Include="entMantenedorMetodoPago.cs" />
+    <Compile Include="entCategoriaProducto.cs" />
+    <Compile Include="entDatallePedido.cs" />
+    <Compile Include="entPagoTrabajador.cs" />
+    <Compile Include="entPedido.cs" />
     <Compile Include="entComprobante.cs" />
+    <Compile Include="entProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

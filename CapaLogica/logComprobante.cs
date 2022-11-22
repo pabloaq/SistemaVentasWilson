@@ -25,5 +25,14 @@ namespace CapaLogica
 
         #endregion Datos Comprobante
 
+
+        #region Verifica Total
+
+        public float VerificarMontoTotal(entComprobante comprobante) => datComprobante.GetInstancia.VerificarMontoTotal(comprobante);
+
+        #endregion Verifica Total
+
+
+
     }
 }

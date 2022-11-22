@@ -135,6 +135,9 @@
     <EmbeddedResource Include="MantenedorProducto.resx">
       <DependentUpon>MantenedorProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PagoTrabajador.resx">
+      <DependentUpon>PagoTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

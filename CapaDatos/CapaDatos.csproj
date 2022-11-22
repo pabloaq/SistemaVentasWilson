@@ -46,6 +46,7 @@
     <Compile Include="datMantenedorMetodoPago.cs" />
     <Compile Include="datCategoriaProducto.cs" />
     <Compile Include="datDetallePedido.cs" />
+    <Compile Include="datPagoTrabajador.cs" />
     <Compile Include="datPedido.cs" />
     <Compile Include="datComprobante.cs" />
     <Compile Include="datProducto.cs" />

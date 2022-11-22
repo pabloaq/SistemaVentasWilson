@@ -45,6 +45,7 @@
     <Compile Include="logMantenedorMetodoPago.cs" />
     <Compile Include="logCategoriaProducto.cs" />
     <Compile Include="logDetallePedido.cs" />
+    <Compile Include="logPagoTrabajador.cs" />
     <Compile Include="logPedido.cs" />
     <Compile Include="logComprobante.cs" />
     <Compile Include="logProducto.cs" />

@@ -126,7 +126,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEliminarDetallePedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@pedidoId", detPedido.PedidoId);
-                cmd.Parameters.AddWithValue("@@productoId", detPedido.ProductoId);
+                cmd.Parameters.AddWithValue("@productoId", detPedido.ProductoId);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

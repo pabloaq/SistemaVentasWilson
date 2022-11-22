@@ -19,7 +19,7 @@ namespace CapaPresentacion
             InitializeComponent();
             listarDetallePedido();
             listarDatosComboBoxPedido();
-            //listarDatosComboBoxProducto()
+            listarDatosComboBoxProducto();
         }
 
         public void listarDetallePedido()
@@ -30,35 +30,34 @@ namespace CapaPresentacion
         private void listarDatosComboBoxPedido()
         {
             cmbPedidoId.DataSource = logPedido.Instancia.ListarPedido();
-            cmbPedidoId.DisplayMember = "PedidoID";
-            cmbPedidoId.ValueMember = "nombreCliente";
+            cmbPedidoId.DisplayMember = "nombreCliente";
+            cmbPedidoId.ValueMember = "PeidoId";
         }
         private void listarDatosComboBoxProducto()
         {
-            /*cmbProductoId.DataSource = logProducto.Instancia.ListarProducto();
-            cmbProductoId.DisplayMember = "ProductoID";
-            cmbProductoId.ValueMember = "nombre";*/
+            cmbProductoId.DataSource = logProducto.GetInstancia.ListarProducto();
+            cmbProductoId.DisplayMember = "nombre";
+            cmbProductoId.ValueMember = "ProductoID";
         }
 
         private void dgvDetPedido_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*DataGridViewRow filaActual = dgvDetPedido.Rows[e.RowIndex];
-            cmbPedidoId.DisplayMember = filaActual.Cells[0].Value.ToString();
-            cmbProductoId.ValueMember = filaActual.Cells[1].Value.ToString();
-            nudCantidad.Value = int.Parse(filaActual.Cells[2].Value.ToString());*/
+            DataGridViewRow filaActual = dgvDetPedido.Rows[e.RowIndex];
+            cmbPedidoId.SelectedIndex = int.Parse(filaActual.Cells[0].Value.ToString())-1;
+            cmbProductoId.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString())-1;
+            nudCantidad.Value = int.Parse(filaActual.Cells[2].Value.ToString());
         }
 
         private void limpiarVariables()
         {
             cmbPedidoId.SelectedIndex = 0;
-            //cmbProductoId.SelectedIndex = 0;
+            cmbProductoId.SelectedIndex = 0;
             nudCantidad.Value = 1;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiarVariables();
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

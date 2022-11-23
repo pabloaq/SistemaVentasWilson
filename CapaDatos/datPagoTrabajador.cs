@@ -36,6 +36,7 @@ namespace CapaDatos
                 {
                     entPagoTrabajador entPago = new entPagoTrabajador
                     {
+                        
                         fechaRegistro = Convert.ToDateTime(reader["fechaRegistro"]),
                         PersonalID = Convert.ToInt32(reader["PersonalID"]),
                         sueldo = Convert.ToSingle(reader["sueldo"])
@@ -61,11 +62,13 @@ namespace CapaDatos
         public bool InsertarPagoTrabajador(entPagoTrabajador entPago)
         {
             SqlCommand cmd = null;
+            bool inserta = false;
 
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
                 cmd = new SqlCommand("pa_insertar_pago_trabajador", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@fechaRegistro", entPago.fechaRegistro);
                 cmd.Parameters.AddWithValue("@PersonalID", entPago.PersonalID);
@@ -73,7 +76,9 @@ namespace CapaDatos
 
                 cn.Open();
 
-                if(cmd.ExecuteNonQuery() > 0) { return true; };
+                if(cmd.ExecuteNonQuery() > 0)  
+                    inserta = true; 
+                
             }
             catch(Exception ex) 
             {
@@ -84,10 +89,11 @@ namespace CapaDatos
                 cmd.Connection.Close();
             }
 
-            return false;
+            return inserta;
         }
 
         #endregion Insertar Pago Trabajador
+
 
         //#region Eliminar Pago Trabajador
         

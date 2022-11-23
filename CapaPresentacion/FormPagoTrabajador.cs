@@ -19,9 +19,9 @@ namespace CapaPresentacion
         {
             DataGridViewRow filaActual = dgvPagoTrabajador.Rows[e.RowIndex];
 
-            dpFechaRegistro.Text = filaActual.Cells[1].Value.ToString();
-            txtPersonalID.Text = filaActual.Cells[2].Value.ToString();
-            txtSueldo.Text = filaActual.Cells[3].Value.ToString();
+            dpFechaRegistro.Text = filaActual.Cells[0].Value.ToString();
+            txtPersonalID.Text = filaActual.Cells[1].Value.ToString();
+            txtSueldo.Text = filaActual.Cells[2].Value.ToString();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

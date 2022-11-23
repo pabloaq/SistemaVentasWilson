@@ -36,7 +36,6 @@ namespace CapaDatos
                 {
                     entPagoTrabajador entPago = new entPagoTrabajador
                     {
-                        FichaID = Convert.ToInt32(reader["FichaID"]),
                         fechaRegistro = Convert.ToDateTime(reader["fechaRegistro"]),
                         PersonalID = Convert.ToInt32(reader["PersonalID"]),
                         sueldo = Convert.ToSingle(reader["sueldo"])
@@ -90,36 +89,37 @@ namespace CapaDatos
 
         #endregion Insertar Pago Trabajador
 
-        #region Eliminar Pago Trabajador
+        //#region Eliminar Pago Trabajador
         
-        public bool EliminarPagoTrabajador(entPagoTrabajador entPago)
-        {
-            SqlCommand cmd = null;
+        //public bool EliminarPagoTrabajador(entPagoTrabajador entPago)
+        //{
+        //    SqlCommand cmd = null;
 
-            try
-            {
-                SqlConnection cn = Conexion.GetInstancia.Conectar;
-                cmd = new SqlCommand("pa_eliminar_pago_trabajador", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
+        //    try
+        //    {
+        //        SqlConnection cn = Conexion.GetInstancia.Conectar;
+        //        cmd = new SqlCommand("pa_eliminar_pago_trabajador", cn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@FichaID", entPago.FichaID);
 
-                cn.Open();
+        //        cn.Open();
 
-                if(cmd.ExecuteNonQuery() > 0) { return true; };
+        //        if(cmd.ExecuteNonQuery() > 0) { return true; };
 
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                cmd.Connection.Close();
-            }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        cmd.Connection.Close();
+        //    }
 
-            return false;
-        }
+        //    return false;
+        //}
 
-        #endregion Eliminar Pago Trabajador
+        //#endregion Eliminar Pago Trabajador
 
     }
 }

@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class PagoTrabajador : Form
+    public partial class FormPagoTrabajador : Form
     {
-        public PagoTrabajador()
+        public FormPagoTrabajador()
         {
             InitializeComponent();
             Listar();
@@ -44,8 +44,8 @@ namespace CapaPresentacion
             {
                 entPagoTrabajador entPago = new entPagoTrabajador
                 {
-                    fechaRegistro = dpFechaRegistro.Value,
                     PersonalID = Convert.ToInt32(txtPersonalID.Text),
+                    fechaRegistro = dpFechaRegistro.Value,
                     sueldo = Convert.ToSingle(txtSueldo.Text),
 
                 };
@@ -55,13 +55,14 @@ namespace CapaPresentacion
             }catch(Exception ex) { 
                 MessageBox.Show("Error" + ex.Message); 
             }
-            limpiarVariables();
+
             Listar();
+            limpiarVariables();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

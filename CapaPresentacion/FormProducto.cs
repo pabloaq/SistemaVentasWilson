@@ -12,19 +12,20 @@ using System.Windows.Forms;
 
 namespace MantenedorProducto
 {
-    public partial class MantenedorProducto : Form
+    public partial class FormProducto : Form
     {
-        public MantenedorProducto()
+        public FormProducto()
         {
             InitializeComponent();
+            llenarDatosComboBoxPedido();
             ListarProducto();
         }
 
-        private void listarDatosComboBoxPedido()
+        private void llenarDatosComboBoxPedido()
         {
             cb_Cod_Categoria.DataSource = logCategoriaProducto.GetInstancia.ListarCategoriasProducto();
-            cb_Cod_Categoria.DisplayMember = "CategoriaproductoID";
-            cb_Cod_Categoria.ValueMember = "nombre";
+            cb_Cod_Categoria.DisplayMember = "idCategoriaProducto";
+            cb_Cod_Categoria.ValueMember = "nombreCategoria";
         }
 
         public void ListarProducto()
@@ -35,7 +36,6 @@ namespace MantenedorProducto
         private void LimpiarVariables()
         {
             txt_codProducto.Text = "";
-            cb_Cod_Categoria.Text = " ";
             cb_ID_Local.Text = " ";
             txt_nomProducto.Text = " ";
             txt_stockProducto.Text = " ";
@@ -48,16 +48,21 @@ namespace MantenedorProducto
             //insertar
             try
             {
-                entProducto p = new entProducto();
-                p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                p.CategoriaproductoID = int.Parse(cb_Cod_Categoria.Text.Trim());
-                p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
-                p.nombre = txt_nomProducto.Text.Trim();
-                p.stock = int.Parse(txt_stockProducto.Text.Trim());
-                p.precioUnitario = txt_PrecioUnitario.Text.Trim();
-                p.fechaCaducidad = dt_fechaCaducidad.Value;
+                if (txt_codProducto.Text != "" && txt_nomProducto.Text != "" && txt_stockProducto.Text != "" && txt_PrecioUnitario.Text != "")
+                {
+                    entProducto p = new entProducto();
+                    p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
+                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
+                    p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
+                    p.nombre = txt_nomProducto.Text.Trim();
+                    p.stock = int.Parse(txt_stockProducto.Text.Trim());
+                    p.precioUnitario = txt_PrecioUnitario.Text.Trim();
+                    p.fechaCaducidad = dt_fechaCaducidad.Value;
 
-                logProducto.GetInstancia.InsertaProducto(p);
+                    logProducto.GetInstancia.InsertaProducto(p);
+                }
+                else
+                    MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -84,15 +89,23 @@ namespace MantenedorProducto
         {
             try
             {
-                entProducto p = new entProducto();
-                p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                p.CategoriaproductoID = int.Parse(cb_Cod_Categoria.Text.Trim());
-                p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
-                p.nombre = txt_nomProducto.Text.Trim();
-                p.stock = int.Parse(txt_stockProducto.Text.Trim());
-                p.precioUnitario = txt_PrecioUnitario.Text.Trim();
-                p.fechaCaducidad = dt_fechaCaducidad.Value;
-                logProducto.GetInstancia.EditaProducto(p);
+                if (txt_codProducto.Text != "" && txt_nomProducto.Text != "" && txt_stockProducto.Text != "" && txt_PrecioUnitario.Text != "")
+                {
+                    entProducto p = new entProducto();
+                    p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
+                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
+                    p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
+                    p.nombre = txt_nomProducto.Text.Trim();
+                    p.stock = int.Parse(txt_stockProducto.Text.Trim());
+                    p.precioUnitario = txt_PrecioUnitario.Text.Trim();
+                    p.fechaCaducidad = dt_fechaCaducidad.Value;
+
+                    logProducto.GetInstancia.EditaProducto(p);
+                }
+                else
+                {
+                    MessageBox.Show("Casilla vacia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -105,17 +118,23 @@ namespace MantenedorProducto
         private void btn_EliminarProd_Click(object sender, EventArgs e)
         {
             try
-            {
-                entProducto p = new entProducto();
+            {   entProducto p = new entProducto();
                 p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
+
                 logProducto.GetInstancia.EliminarProducto(p);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error.." + ex);
+                if (txt_codProducto.Text == "")
+                    MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LimpiarVariables();
             ListarProducto();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

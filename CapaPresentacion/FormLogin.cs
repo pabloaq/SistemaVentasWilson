@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,8 +63,11 @@ namespace CapaPresentacion
         {
             if(txtUsuario.Text == usuario && txtContrasenia.Text == contrasenia)
             {
-
-            } 
+                FormAdmin form = new FormAdmin();
+                this.Hide();
+                form.ShowDialog();
+                this.Close();
+            }
             else
             {
                 if(txtUsuario.Text != usuario && txtContrasenia.Text != contrasenia)

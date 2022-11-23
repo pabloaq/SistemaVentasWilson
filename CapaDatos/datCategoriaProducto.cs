@@ -59,6 +59,7 @@ namespace CapaDatos
         #region Agregar Categoria Producto
         public bool AgregarCategoriaProducto(entCategoriaProducto cate){
             SqlCommand cmd = null;
+            bool inserta = false;
 
             try{
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
@@ -72,7 +73,9 @@ namespace CapaDatos
 
                 cn.Open();
 
-                if (cmd.ExecuteNonQuery() > 0) { return true; }
+                if (cmd.ExecuteNonQuery() > 0) { 
+                    inserta = true; 
+                }
             }
             catch(Exception e){
                 Console.WriteLine("Error: " + e);
@@ -81,9 +84,8 @@ namespace CapaDatos
                 cmd.Connection.Close();
             }
 
-            return false;
+            return inserta;
         }
-
 
         #endregion Agregar Categoria Producto
 
@@ -97,6 +99,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("pa_modificar_categoria_producto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@CategoriaproductoID", cate.idCategoriaProducto);
                 cmd.Parameters.AddWithValue("@nombre", cate.nombreCategoria);
                 cmd.Parameters.AddWithValue("@descripcion", cate.descripcion);
 

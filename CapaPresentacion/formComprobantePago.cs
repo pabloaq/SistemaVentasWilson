@@ -2,13 +2,6 @@
 using CapaLogica;
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -20,6 +13,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             txtCodigoCom.Enabled = false;
+            listarMetodoPagoComboBox();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -27,19 +21,30 @@ namespace CapaPresentacion
             this.Close();
         }
 
+        private void listarPedidosIdComboBox()
+        {
+            cbxIdPedido.DataSource = logPedido.Instancia.ListarPedido();
+            cbxIdPedido.DisplayMember = "nombreCliente";
+            cbxIdPedido.ValueMember = "PedidoId";
+        }
+
+        private void listarMetodoPagoComboBox()
+        {
+            cbxMetodoPago.DataSource = logCategoriaMetodoPago.Instancia.ListarCategoriaMetodoPago();
+            cbxMetodoPago.DisplayMember = "idCategoriaMetodoPago";
+            cbxMetodoPago.ValueMember = "nombreCategoria";
+        }
 
         private void btnRealizarComprobante_Click(object sender, EventArgs e)
         {
             try
             {
                 entComprobante comprobante = new entComprobante();
-                comprobante.PedidoID = Convert.ToInt32(cbxIdPedido.Text);
-                comprobante.MetodopagoID = Convert.ToInt32(cbxMetodoPago.Text);
-                comprobante.LocalID = Convert.ToInt32(cbxIdLocal.Text);
+                comprobante.PedidoID = Convert.ToInt32(cbxIdPedido.SelectedValue);
+                comprobante.MetodopagoID = Convert.ToInt32(cbxMetodoPago.SelectedValue);
+                comprobante.LocalID = Convert.ToInt32(cbxIdLocal.SelectedValue);
                 comprobante.montoTotal = float.Parse(txtTotal.Text);
 
-
-                //MessageBox.Show(logComprobante.GetInstancia.VerificarMontoTotal(comprobante).ToString());
 
                 if (comprobante.montoTotal == logComprobante.GetInstancia.VerificarMontoTotal(comprobante))
                 {
@@ -64,6 +69,11 @@ namespace CapaPresentacion
             //ListarClientes();
         }
 
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
@@ -75,8 +85,6 @@ namespace CapaPresentacion
             {
                 Left = Left + (e.X - x);
                 Top = Top + (e.Y - y);
-                
-
             }
         }
     }

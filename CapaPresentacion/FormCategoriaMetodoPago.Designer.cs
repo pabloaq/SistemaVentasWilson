@@ -39,7 +39,7 @@
             this.gbListaCatMetodoPago = new System.Windows.Forms.GroupBox();
             this.dgvCatMetodoPago = new System.Windows.Forms.DataGridView();
             this.txtCodigoCatMetodoPago = new System.Windows.Forms.TextBox();
-            this.btnAtrasCatMetodoPago = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gbListaCatMetodoPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatMetodoPago)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,8 @@
             // 
             // txtNombreCatMetodoPago
             // 
+            this.txtNombreCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.txtNombreCatMetodoPago.ForeColor = System.Drawing.Color.White;
             this.txtNombreCatMetodoPago.Location = new System.Drawing.Point(12, 65);
             this.txtNombreCatMetodoPago.Name = "txtNombreCatMetodoPago";
             this.txtNombreCatMetodoPago.Size = new System.Drawing.Size(181, 20);
@@ -98,6 +100,8 @@
             // 
             // txtDescripcionCatMetodoPago
             // 
+            this.txtDescripcionCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.txtDescripcionCatMetodoPago.ForeColor = System.Drawing.Color.White;
             this.txtDescripcionCatMetodoPago.Location = new System.Drawing.Point(12, 106);
             this.txtDescripcionCatMetodoPago.Multiline = true;
             this.txtDescripcionCatMetodoPago.Name = "txtDescripcionCatMetodoPago";
@@ -150,30 +154,34 @@
             this.dgvCatMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatMetodoPago.Location = new System.Drawing.Point(6, 16);
             this.dgvCatMetodoPago.Name = "dgvCatMetodoPago";
+            this.dgvCatMetodoPago.ReadOnly = true;
             this.dgvCatMetodoPago.Size = new System.Drawing.Size(438, 198);
             this.dgvCatMetodoPago.TabIndex = 0;
             this.dgvCatMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatMetodoPago_CellContentClick);
             // 
             // txtCodigoCatMetodoPago
             // 
+            this.txtCodigoCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.txtCodigoCatMetodoPago.ForeColor = System.Drawing.Color.White;
             this.txtCodigoCatMetodoPago.Location = new System.Drawing.Point(12, 26);
             this.txtCodigoCatMetodoPago.Name = "txtCodigoCatMetodoPago";
             this.txtCodigoCatMetodoPago.Size = new System.Drawing.Size(181, 20);
             this.txtCodigoCatMetodoPago.TabIndex = 21;
             // 
-            // btnAtrasCatMetodoPago
+            // btnSalir
             // 
-            this.btnAtrasCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btnAtrasCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtrasCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasCatMetodoPago.ForeColor = System.Drawing.Color.Black;
-            this.btnAtrasCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAtrasCatMetodoPago.Location = new System.Drawing.Point(12, 242);
-            this.btnAtrasCatMetodoPago.Name = "btnAtrasCatMetodoPago";
-            this.btnAtrasCatMetodoPago.Size = new System.Drawing.Size(86, 34);
-            this.btnAtrasCatMetodoPago.TabIndex = 22;
-            this.btnAtrasCatMetodoPago.Text = "Atras";
-            this.btnAtrasCatMetodoPago.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnSalir.Location = new System.Drawing.Point(12, 242);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(86, 34);
+            this.btnSalir.TabIndex = 22;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnAtrasCatMetodoPago_Click);
             // 
             // FormCategoriaMetodoPago
             // 
@@ -181,7 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(768, 288);
-            this.Controls.Add(this.btnAtrasCatMetodoPago);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtCodigoCatMetodoPago);
             this.Controls.Add(this.gbListaCatMetodoPago);
             this.Controls.Add(this.btn_EliminarCatMetodoPago);
@@ -192,6 +200,7 @@
             this.Controls.Add(this.lbl_2);
             this.Controls.Add(this.btn_AgregarCatMetodoPago);
             this.Controls.Add(this.lbl_1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCategoriaMetodoPago";
             this.Text = "FormCategoriaMetodoPago";
             this.gbListaCatMetodoPago.ResumeLayout(false);
@@ -213,6 +222,6 @@
         private System.Windows.Forms.GroupBox gbListaCatMetodoPago;
         private System.Windows.Forms.DataGridView dgvCatMetodoPago;
         private System.Windows.Forms.TextBox txtCodigoCatMetodoPago;
-        private System.Windows.Forms.Button btnAtrasCatMetodoPago;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

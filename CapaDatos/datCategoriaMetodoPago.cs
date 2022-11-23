@@ -33,7 +33,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
-                cmd = new SqlCommand("spListarCategoriaMetodoPago", cn);
+                cmd = new SqlCommand("pa_listar_Categoriametodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -65,7 +65,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
-                cmd = new SqlCommand("spInsertarCategoriaMetodoPago", cn);
+                cmd = new SqlCommand("pa_insert_Categoriametodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@CategoriametodopagoID", catMetodoPago.idCategoriaMetodoPago);
                 cmd.Parameters.AddWithValue("@nombre", catMetodoPago.nombreCategoria);
@@ -94,9 +94,10 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
-                cmd = new SqlCommand("spEditarCategoriaMetodoPago", cn);
+                cmd = new SqlCommand("pa_update_Categoriametodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@CategoriametodopagoID", catMetodoPago.idCategoriaMetodoPago);
                 cmd.Parameters.AddWithValue("@nombre", catMetodoPago.nombreCategoria);
                 cmd.Parameters.AddWithValue("@descripcion", catMetodoPago.descripcion);
 
@@ -124,7 +125,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
-                cmd = new SqlCommand("spEliminarCategoriaMetodoPago", cn);
+                cmd = new SqlCommand("pa_delete_Categoriametodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@CategoriametodopagoID", catMetodoPago.idCategoriaMetodoPago);
 

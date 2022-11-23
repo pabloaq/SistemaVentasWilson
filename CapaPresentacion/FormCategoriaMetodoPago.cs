@@ -1,13 +1,6 @@
 ﻿using CapaEntidad;
 using CapaLogica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -36,11 +29,18 @@ namespace CapaPresentacion
         {
             try
             {
-                entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
-                catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
-                catMetodoPago.nombreCategoria = txtNombreCatMetodoPago.Text;
-                catMetodoPago.descripcion = txtDescripcionCatMetodoPago.Text;
-                logCategoriaMetodoPago.Instancia.InsertaCategoriaMetodoPago(catMetodoPago);
+                if (txtCodigoCatMetodoPago.Text != "" && txtNombreCatMetodoPago.Text != "")
+                {
+                    entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
+                    catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
+                    catMetodoPago.nombreCategoria = txtNombreCatMetodoPago.Text;
+                    catMetodoPago.descripcion = txtDescripcionCatMetodoPago.Text;
+                    logCategoriaMetodoPago.Instancia.InsertaCategoriaMetodoPago(catMetodoPago);
+                }
+                else
+                {
+                    MessageBox.Show("Casillas vacia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -55,11 +55,20 @@ namespace CapaPresentacion
         {
             try
             {
-                entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
-                catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
-                catMetodoPago.nombreCategoria = txtNombreCatMetodoPago.Text;
-                catMetodoPago.descripcion = txtDescripcionCatMetodoPago.Text;
-                logCategoriaMetodoPago.Instancia.EditaCategoriaMetodoPago(catMetodoPago);
+                if (txtCodigoCatMetodoPago.Text != "" && txtNombreCatMetodoPago.Text != "")
+                {
+                    entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
+                    catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
+                    catMetodoPago.nombreCategoria = txtNombreCatMetodoPago.Text;
+                    catMetodoPago.descripcion = txtDescripcionCatMetodoPago.Text;
+
+                    logCategoriaMetodoPago.Instancia.EditaCategoriaMetodoPago(catMetodoPago);
+                }
+                else
+                {
+                    MessageBox.Show("Casilla vacia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             catch (Exception ex)
             {
@@ -82,7 +91,7 @@ namespace CapaPresentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error.." + ex);
+                MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             limpiarVariables();
@@ -96,6 +105,11 @@ namespace CapaPresentacion
             txtCodigoCatMetodoPago.Text = filaActual.Cells[0].Value.ToString();
             txtNombreCatMetodoPago.Text = filaActual.Cells[1].Value.ToString();
             txtDescripcionCatMetodoPago.Text = filaActual.Cells[2].Value.ToString();
+        }
+
+        private void btnAtrasCatMetodoPago_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

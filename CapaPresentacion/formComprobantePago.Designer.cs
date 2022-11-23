@@ -86,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 106);
+            this.label2.Location = new System.Drawing.Point(34, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 24);
             this.label2.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 176);
+            this.label4.Location = new System.Drawing.Point(34, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 24);
             this.label4.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 235);
+            this.label5.Location = new System.Drawing.Point(38, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(171, 24);
             this.label5.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 300);
+            this.label6.Location = new System.Drawing.Point(38, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 24);
             this.label6.TabIndex = 6;
@@ -126,7 +126,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(119, 454);
+            this.label7.Location = new System.Drawing.Point(131, 427);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 7;
@@ -144,7 +144,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(193, 454);
+            this.txtTotal.Location = new System.Drawing.Point(202, 427);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(81, 24);
@@ -154,7 +154,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 396);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 369);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,21 +164,6 @@
             // cbxIdPedido
             // 
             this.cbxIdPedido.FormattingEnabled = true;
-            this.cbxIdPedido.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
             this.cbxIdPedido.Location = new System.Drawing.Point(213, 178);
             this.cbxIdPedido.Name = "cbxIdPedido";
             this.cbxIdPedido.Size = new System.Drawing.Size(100, 21);
@@ -187,25 +172,11 @@
             // cbxMetodoPago
             // 
             this.cbxMetodoPago.FormattingEnabled = true;
-            this.cbxMetodoPago.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
             this.cbxMetodoPago.Location = new System.Drawing.Point(213, 233);
             this.cbxMetodoPago.Name = "cbxMetodoPago";
             this.cbxMetodoPago.Size = new System.Drawing.Size(100, 21);
             this.cbxMetodoPago.TabIndex = 20;
+            
             // 
             // cbxIdLocal
             // 
@@ -225,7 +196,7 @@
             "12",
             "13",
             "14"});
-            this.cbxIdLocal.Location = new System.Drawing.Point(213, 298);
+            this.cbxIdLocal.Location = new System.Drawing.Point(213, 300);
             this.cbxIdLocal.Name = "cbxIdLocal";
             this.cbxIdLocal.Size = new System.Drawing.Size(100, 21);
             this.cbxIdLocal.TabIndex = 21;
@@ -236,7 +207,7 @@
             this.btnRealizarComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRealizarComprobante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRealizarComprobante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.btnRealizarComprobante.Location = new System.Drawing.Point(289, 454);
+            this.btnRealizarComprobante.Location = new System.Drawing.Point(289, 424);
             this.btnRealizarComprobante.Name = "btnRealizarComprobante";
             this.btnRealizarComprobante.Size = new System.Drawing.Size(101, 24);
             this.btnRealizarComprobante.TabIndex = 22;
@@ -250,12 +221,13 @@
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.ForeColor = System.Drawing.Color.White;
-            this.btnAtras.Location = new System.Drawing.Point(289, 422);
+            this.btnAtras.Location = new System.Drawing.Point(289, 378);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(101, 26);
             this.btnAtras.TabIndex = 23;
             this.btnAtras.Text = "ATRAS";
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // formComprobantePago
             // 

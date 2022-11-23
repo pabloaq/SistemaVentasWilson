@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="datCategoriaMetodoPago.cs" />
-    <Compile Include="datMantenedorMetodoPago.cs" />
     <Compile Include="datCategoriaProducto.cs" />
     <Compile Include="datDetallePedido.cs" />
     <Compile Include="datPagoTrabajador.cs" />

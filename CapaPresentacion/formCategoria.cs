@@ -33,7 +33,7 @@ namespace CapaPresentacion
 
         #region Listar Categoria Producto
 
-        public void ListarCategoria() => logCategoriaProducto.GetInstancia.ListarCategoriasProducto();
+        public void ListarCategoria() =>  dgvCategoriaProducto.DataSource = logCategoriaProducto.GetInstancia.ListarCategoriasProducto();
 
         #endregion Listar Categoria Producto
 
@@ -41,45 +41,59 @@ namespace CapaPresentacion
         {
             try
             {
-                entCategoriaProducto cate = new entCategoriaProducto
+                if (txtCodigoCategoria.Text != "" && txtNombreCategoria.Text != "" && txtDescripcionCategoria.Text != "")
                 {
-                    idCategoriaProducto = Convert.ToInt32(txtCodigoCategoria.Text.Trim()),
-                    nombreCategoria = txtNombreCategoria.Text,
-                    descripcion = txtDescripcionCategoria.Text
-                };
+                    entCategoriaProducto cate = new entCategoriaProducto
+                    {
+                        idCategoriaProducto = Convert.ToInt32(txtCodigoCategoria.Text.Trim()),
+                        nombreCategoria = txtNombreCategoria.Text,
+                        descripcion = txtDescripcionCategoria.Text
+                    };
 
-                logCategoriaProducto.GetInstancia.InsertarCategoriasProducto(cate);
+                    logCategoriaProducto.GetInstancia.InsertarCategoriasProducto(cate);
+                }
+                else
+                {
+                    MessageBox.Show("Casillas vacias", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                    
 
             }catch(Exception ex)
             {
-                MessageBox.Show("Error: " + ex);
+                MessageBox.Show("Error" + ex.Message);
             }
 
-            LimpiarVariables();
-
             ListarCategoria();
+            LimpiarVariables();
         }
 
         private void btnModificarCategoria_Click(object sender, EventArgs e)
         {
             try
             {
-                entCategoriaProducto cate = new entCategoriaProducto
+                if (txtCodigoCategoria.Text != "" && txtNombreCategoria.Text != "" && txtDescripcionCategoria.Text != "")
                 {
-                    idCategoriaProducto = Convert.ToInt32(txtCodigoCategoria.Text.Trim()),
-                    nombreCategoria = txtNombreCategoria.Text,
-                    descripcion = txtDescripcionCategoria.Text
-                };
+                    entCategoriaProducto cate = new entCategoriaProducto
+                    {
+                        idCategoriaProducto = Convert.ToInt32(txtCodigoCategoria.Text.Trim()),
+                        nombreCategoria = txtNombreCategoria.Text,
+                        descripcion = txtDescripcionCategoria.Text
+                    };
 
-                logCategoriaProducto.GetInstancia.ModificarCategoriasProducto(cate);
+                    logCategoriaProducto.GetInstancia.ModificarCategoriasProducto(cate);
+                }
+                else
+                {
+                    MessageBox.Show("Casilla vacia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
             }
 
-            LimpiarVariables();
             ListarCategoria();
+            LimpiarVariables();
         }
 
         private void dgvCategoriaProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -105,12 +119,17 @@ namespace CapaPresentacion
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error: " + ex);
+                if(txtCodigoCategoria.Text == "")
+                    MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             LimpiarVariables();
             ListarCategoria();
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

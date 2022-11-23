@@ -17,7 +17,7 @@ namespace CapaLogica
 
         public void InsertarPagoTrabajador(entPagoTrabajador entPago) => datPagoTrabajador.GetInstancia.InsertarPagoTrabajador(entPago);
 
-        public void EliminarPagoTrabajador(entPagoTrabajador entPago) => datPagoTrabajador.GetInstancia.EliminarPagoTrabajador(entPago);
+        //public void EliminarPagoTrabajador(entPagoTrabajador entPago) => datPagoTrabajador.GetInstancia.EliminarPagoTrabajador(entPago);
     
     }
 }

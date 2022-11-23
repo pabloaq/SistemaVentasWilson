@@ -1,6 +1,6 @@
 ﻿namespace MantenedorProducto
 {
-    partial class MantenedorProducto
+    partial class FormProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_atras = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listaProductos)).BeginInit();
@@ -71,8 +71,8 @@
             this.panel1.Controls.Add(this.btn_agregar);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(18, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1056, 352);
             this.panel1.TabIndex = 0;
@@ -83,7 +83,7 @@
             this.btn_EliminarProd.FlatAppearance.BorderSize = 0;
             this.btn_EliminarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EliminarProd.Location = new System.Drawing.Point(380, 297);
-            this.btn_EliminarProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_EliminarProd.Margin = new System.Windows.Forms.Padding(2);
             this.btn_EliminarProd.Name = "btn_EliminarProd";
             this.btn_EliminarProd.Size = new System.Drawing.Size(74, 28);
             this.btn_EliminarProd.TabIndex = 16;
@@ -97,7 +97,7 @@
             this.btn_Modificarprodu.FlatAppearance.BorderSize = 0;
             this.btn_Modificarprodu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modificarprodu.Location = new System.Drawing.Point(301, 297);
-            this.btn_Modificarprodu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Modificarprodu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modificarprodu.Name = "btn_Modificarprodu";
             this.btn_Modificarprodu.Size = new System.Drawing.Size(74, 28);
             this.btn_Modificarprodu.TabIndex = 15;
@@ -111,7 +111,7 @@
             this.btn_consultaStock.FlatAppearance.BorderSize = 0;
             this.btn_consultaStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_consultaStock.Location = new System.Drawing.Point(458, 297);
-            this.btn_consultaStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_consultaStock.Margin = new System.Windows.Forms.Padding(2);
             this.btn_consultaStock.Name = "btn_consultaStock";
             this.btn_consultaStock.Size = new System.Drawing.Size(74, 28);
             this.btn_consultaStock.TabIndex = 14;
@@ -125,7 +125,7 @@
             this.btn_agregar.FlatAppearance.BorderSize = 0;
             this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregar.Location = new System.Drawing.Point(222, 297);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(74, 28);
             this.btn_agregar.TabIndex = 13;
@@ -139,10 +139,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(218, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(836, 281);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(742, 281);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Productos";
@@ -150,12 +150,12 @@
             // dgv_listaProductos
             // 
             this.dgv_listaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listaProductos.Location = new System.Drawing.Point(4, 26);
-            this.dgv_listaProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_listaProductos.Location = new System.Drawing.Point(4, 25);
+            this.dgv_listaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_listaProductos.Name = "dgv_listaProductos";
             this.dgv_listaProductos.RowHeadersWidth = 51;
             this.dgv_listaProductos.RowTemplate.Height = 24;
-            this.dgv_listaProductos.Size = new System.Drawing.Size(827, 250);
+            this.dgv_listaProductos.Size = new System.Drawing.Size(727, 250);
             this.dgv_listaProductos.TabIndex = 0;
             this.dgv_listaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listaProductos_CellContentClick);
             // 
@@ -177,7 +177,7 @@
             this.panel2.Controls.Add(this.txt_nomProducto);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(9, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(204, 332);
             this.panel2.TabIndex = 11;
@@ -187,7 +187,7 @@
             this.cb_enableFecha.AutoSize = true;
             this.cb_enableFecha.ForeColor = System.Drawing.Color.Snow;
             this.cb_enableFecha.Location = new System.Drawing.Point(12, 184);
-            this.cb_enableFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_enableFecha.Margin = new System.Windows.Forms.Padding(2);
             this.cb_enableFecha.Name = "cb_enableFecha";
             this.cb_enableFecha.Size = new System.Drawing.Size(97, 17);
             this.cb_enableFecha.TabIndex = 14;
@@ -209,7 +209,7 @@
             // txt_PrecioUnitario
             // 
             this.txt_PrecioUnitario.Location = new System.Drawing.Point(10, 162);
-            this.txt_PrecioUnitario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrecioUnitario.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrecioUnitario.Name = "txt_PrecioUnitario";
             this.txt_PrecioUnitario.Size = new System.Drawing.Size(128, 20);
             this.txt_PrecioUnitario.TabIndex = 12;
@@ -228,8 +228,13 @@
             // cb_ID_Local
             // 
             this.cb_ID_Local.FormattingEnabled = true;
+            this.cb_ID_Local.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3"});
             this.cb_ID_Local.Location = new System.Drawing.Point(10, 303);
-            this.cb_ID_Local.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_ID_Local.Margin = new System.Windows.Forms.Padding(2);
             this.cb_ID_Local.Name = "cb_ID_Local";
             this.cb_ID_Local.Size = new System.Drawing.Size(180, 21);
             this.cb_ID_Local.TabIndex = 10;
@@ -238,7 +243,7 @@
             // 
             this.cb_Cod_Categoria.FormattingEnabled = true;
             this.cb_Cod_Categoria.Location = new System.Drawing.Point(10, 262);
-            this.cb_Cod_Categoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Cod_Categoria.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Cod_Categoria.Name = "cb_Cod_Categoria";
             this.cb_Cod_Categoria.Size = new System.Drawing.Size(182, 21);
             this.cb_Cod_Categoria.TabIndex = 9;
@@ -279,7 +284,7 @@
             // dt_fechaCaducidad
             // 
             this.dt_fechaCaducidad.Location = new System.Drawing.Point(10, 219);
-            this.dt_fechaCaducidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dt_fechaCaducidad.Margin = new System.Windows.Forms.Padding(2);
             this.dt_fechaCaducidad.Name = "dt_fechaCaducidad";
             this.dt_fechaCaducidad.Size = new System.Drawing.Size(182, 20);
             this.dt_fechaCaducidad.TabIndex = 6;
@@ -287,7 +292,7 @@
             // txt_codProducto
             // 
             this.txt_codProducto.Location = new System.Drawing.Point(10, 26);
-            this.txt_codProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_codProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_codProducto.Name = "txt_codProducto";
             this.txt_codProducto.Size = new System.Drawing.Size(132, 20);
             this.txt_codProducto.TabIndex = 1;
@@ -306,7 +311,7 @@
             // txt_stockProducto
             // 
             this.txt_stockProducto.Location = new System.Drawing.Point(10, 124);
-            this.txt_stockProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_stockProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_stockProducto.Name = "txt_stockProducto";
             this.txt_stockProducto.Size = new System.Drawing.Size(132, 20);
             this.txt_stockProducto.TabIndex = 5;
@@ -314,7 +319,7 @@
             // txt_nomProducto
             // 
             this.txt_nomProducto.Location = new System.Drawing.Point(10, 74);
-            this.txt_nomProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nomProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nomProducto.Name = "txt_nomProducto";
             this.txt_nomProducto.Size = new System.Drawing.Size(132, 20);
             this.txt_nomProducto.TabIndex = 3;
@@ -334,10 +339,10 @@
             // 
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(915, 366);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(803, 366);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(150, 56);
+            this.panel3.Size = new System.Drawing.Size(175, 56);
             this.panel3.TabIndex = 1;
             // 
             // label6
@@ -362,30 +367,32 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Av. España 1970. Trujillo. Peru";
             // 
-            // btn_atras
+            // btnSalir
             // 
-            this.btn_atras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btn_atras.FlatAppearance.BorderSize = 0;
-            this.btn_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_atras.Location = new System.Drawing.Point(9, 366);
-            this.btn_atras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_atras.Name = "btn_atras";
-            this.btn_atras.Size = new System.Drawing.Size(67, 28);
-            this.btn_atras.TabIndex = 2;
-            this.btn_atras.Text = "Atras";
-            this.btn_atras.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Location = new System.Drawing.Point(27, 376);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(67, 28);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // MantenedorProducto
+            // FormProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(59)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(1028, 430);
-            this.Controls.Add(this.btn_atras);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.ClientSize = new System.Drawing.Size(980, 430);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "MantenedorProducto";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FormProducto";
             this.Text = "MantenedorProducto";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -417,7 +424,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_atras;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btn_consultaStock;
         private System.Windows.Forms.ComboBox cb_Cod_Categoria;
         private System.Windows.Forms.Label label8;

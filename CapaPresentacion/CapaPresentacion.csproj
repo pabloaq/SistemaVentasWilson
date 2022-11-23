@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PagoTrabajador.cs">
+    <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagoTrabajador.Designer.cs">
-      <DependentUpon>PagoTrabajador.cs</DependentUpon>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPagoTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPagoTrabajador.Designer.cs">
+      <DependentUpon>FormPagoTrabajador.cs</DependentUpon>
     </Compile>
     <Compile Include="formCategoria.cs">
       <SubType>Form</SubType>
@@ -94,14 +100,17 @@
     <Compile Include="FormPedido.Designer.cs">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenedorProducto.cs">
+    <Compile Include="FormProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MantenedorProducto.Designer.cs">
-      <DependentUpon>MantenedorProducto.cs</DependentUpon>
+    <Compile Include="FormProducto.Designer.cs">
+      <DependentUpon>FormProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formCategoria.resx">
       <DependentUpon>formCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,11 +132,11 @@
     <EmbeddedResource Include="FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorProducto.resx">
-      <DependentUpon>MantenedorProducto.cs</DependentUpon>
+    <EmbeddedResource Include="FormProducto.resx">
+      <DependentUpon>FormProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagoTrabajador.resx">
-      <DependentUpon>PagoTrabajador.cs</DependentUpon>
+    <EmbeddedResource Include="FormPagoTrabajador.resx">
+      <DependentUpon>FormPagoTrabajador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +162,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{BE348ACC-95CF-460F-B77F-B7C15DAF9937}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
       <Project>{a4dbdfe6-5a28-47f4-98bd-2b6d47fe0b88}</Project>
       <Name>CapaEntidad</Name>

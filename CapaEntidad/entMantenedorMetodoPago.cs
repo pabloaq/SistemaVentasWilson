@@ -8,7 +8,9 @@ namespace CapaEntidad
 {
     public class entMantenedorMetodoPago
     {
-        public int metodopagoID { get; set; }
+        public int MetodopagoID { get; set; }
+
+        public int CategoriametodopagoID { get; set; }
 
         public string nombre { get; set; }
 

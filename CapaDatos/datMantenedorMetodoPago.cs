@@ -37,7 +37,8 @@ namespace CapaDatos
                 {
                     entMantenedorMetodoPago cate = new entMantenedorMetodoPago
                     {
-                        metodopagoID = Convert.ToInt32(reader["metodopagoID"]),
+                        MetodopagoID = Convert.ToInt32(reader["metodopagoID"]),
+                        CategoriametodopagoID = Convert.ToInt32(reader["CategoriametodopagoID"]),
                         nombre = Convert.ToString(reader["nombre"]),
                         descripcion = Convert.ToString(reader["descripcion"])
                     };
@@ -74,7 +75,8 @@ namespace CapaDatos
                 cmd = new SqlCommand("pa_insertar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@metodopagoID", cate.metodopagoID);
+                cmd.Parameters.AddWithValue("@metodopagoID", cate.MetodopagoID);
+                cmd.Parameters.AddWithValue("@CategoriametodopagoID", cate.CategoriametodopagoID);
                 cmd.Parameters.AddWithValue("@nombre", cate.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", cate.descripcion);
 
@@ -105,9 +107,10 @@ namespace CapaDatos
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
 
-                cmd = new SqlCommand("pa_modificar_metodopago", cn);
+                cmd = new SqlCommand("pa_update_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@CategoriametodopagoID", cate.CategoriametodopagoID);
                 cmd.Parameters.AddWithValue("@nombre", cate.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", cate.descripcion);
 
@@ -143,7 +146,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("pa_eliminar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@metodopagoID", cate.metodopagoID);
+                cmd.Parameters.AddWithValue("@metodopagoID", cate.MetodopagoID);
 
                 cn.Open();
 

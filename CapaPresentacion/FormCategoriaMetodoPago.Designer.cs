@@ -40,6 +40,7 @@
             this.dgvCatMetodoPago = new System.Windows.Forms.DataGridView();
             this.txtCodigoCatMetodoPago = new System.Windows.Forms.TextBox();
             this.btnAtrasCatMetodoPago = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.gbListaCatMetodoPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatMetodoPago)).BeginInit();
             this.SuspendLayout();
@@ -175,12 +176,20 @@
             this.btnAtrasCatMetodoPago.Text = "Atras";
             this.btnAtrasCatMetodoPago.UseVisualStyleBackColor = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(278, 261);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 23;
+            // 
             // FormCategoriaMetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(768, 288);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnAtrasCatMetodoPago);
             this.Controls.Add(this.txtCodigoCatMetodoPago);
             this.Controls.Add(this.gbListaCatMetodoPago);
@@ -214,5 +223,6 @@
         private System.Windows.Forms.DataGridView dgvCatMetodoPago;
         private System.Windows.Forms.TextBox txtCodigoCatMetodoPago;
         private System.Windows.Forms.Button btnAtrasCatMetodoPago;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

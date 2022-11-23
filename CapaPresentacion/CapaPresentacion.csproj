@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MantenedorMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorMetodoPago.Designer.cs">
+      <DependentUpon>MantenedorMetodoPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="PagoTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPedido.resx">
       <DependentUpon>FormPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorMetodoPago.resx">
+      <DependentUpon>MantenedorMetodoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorProducto.resx">
       <DependentUpon>MantenedorProducto.cs</DependentUpon>

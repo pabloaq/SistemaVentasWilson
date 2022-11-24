@@ -7,7 +7,6 @@ namespace CapaPresentacion
 {
     public partial class FormAdmin : Form
     {
-        bool expandir;
 
         public FormAdmin()
         {

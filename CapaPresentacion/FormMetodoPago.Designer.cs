@@ -166,6 +166,7 @@
             this.dgvMetodoPago.ReadOnly = true;
             this.dgvMetodoPago.Size = new System.Drawing.Size(474, 283);
             this.dgvMetodoPago.TabIndex = 6;
+            this.dgvMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellContentClick);
             // 
             // txtDescripcionMetodoPago
             // 

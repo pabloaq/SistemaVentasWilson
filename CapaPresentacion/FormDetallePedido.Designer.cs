@@ -106,6 +106,7 @@
             this.btnAtras.TabIndex = 0;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // panel3
             // 

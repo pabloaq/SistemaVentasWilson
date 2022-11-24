@@ -28,6 +28,11 @@ namespace MantenedorProducto
             cb_Cod_Categoria.ValueMember = "nombreCategoria";
         }
 
+        private void llenarDatosComboBoxLocal()
+        {
+            
+        }
+
         public void ListarProducto()
         {
             dgv_listaProductos.DataSource = logProducto.GetInstancia.ListarProducto();
@@ -52,11 +57,11 @@ namespace MantenedorProducto
                 {
                     entProducto p = new entProducto();
                     p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
-                    p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
+                   //p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedValue);
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
-                    p.precioUnitario = txt_PrecioUnitario.Text.Trim();
+                    p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text);
                     p.fechaCaducidad = dt_fechaCaducidad.Value;
 
                     logProducto.GetInstancia.InsertaProducto(p);
@@ -97,7 +102,7 @@ namespace MantenedorProducto
                     p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
-                    p.precioUnitario = txt_PrecioUnitario.Text.Trim();
+                    p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text);
                     p.fechaCaducidad = dt_fechaCaducidad.Value;
 
                     logProducto.GetInstancia.EditaProducto(p);
@@ -118,15 +123,24 @@ namespace MantenedorProducto
         private void btn_EliminarProd_Click(object sender, EventArgs e)
         {
             try
-            {   entProducto p = new entProducto();
-                p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
+            {
+                if (txt_codProducto.Text != "")
+                {
+                    entProducto p = new entProducto();
+                    p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
 
-                logProducto.GetInstancia.EliminarProducto(p);
+                    logProducto.GetInstancia.EliminarProducto(p);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             catch (Exception ex)
             {
-                if (txt_codProducto.Text == "")
-                    MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
+                    
             }
             LimpiarVariables();
             ListarProducto();

@@ -95,12 +95,18 @@ namespace CapaPresentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //llamar al formulario detalle pedido
+            FormDetallePedido detpe = new FormDetallePedido();
+            Hide();
+            detpe.ShowDialog();
+            Close();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormInicio inicio = new FormInicio();
+            Hide();
+            inicio.ShowDialog();
+            Close();
         }
     }
 }

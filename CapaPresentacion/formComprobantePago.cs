@@ -14,6 +14,7 @@ namespace CapaPresentacion
             InitializeComponent();
             txtCodigoCom.Enabled = false;
             listarMetodoPagoComboBox();
+            listarPedidosIdComboBox();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -24,8 +25,8 @@ namespace CapaPresentacion
         private void listarPedidosIdComboBox()
         {
             cbxIdPedido.DataSource = logPedido.Instancia.ListarPedido();
-            cbxIdPedido.DisplayMember = "nombreCliente";
-            cbxIdPedido.ValueMember = "PedidoId";
+            cbxIdPedido.DisplayMember = "PeidoId";
+            cbxIdPedido.ValueMember = "nombreCliente";
         }
 
         private void listarMetodoPagoComboBox()

@@ -77,6 +77,7 @@
             this.dgvPagoTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagoTrabajador.Location = new System.Drawing.Point(416, 20);
             this.dgvPagoTrabajador.Name = "dgvPagoTrabajador";
+            this.dgvPagoTrabajador.ReadOnly = true;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPagoTrabajador.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPagoTrabajador.Size = new System.Drawing.Size(340, 220);

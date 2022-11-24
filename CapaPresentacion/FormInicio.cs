@@ -13,9 +13,17 @@ namespace CapaPresentacion
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             FormLogin login = new FormLogin();
-            this.Hide();
+            Hide();
             login.ShowDialog();
-            this.Close();
+            Close();
+        }
+        
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            FormPedido pedido = new FormPedido();
+            Hide();
+            pedido.ShowDialog();
+            Close();
         }
     }
 }

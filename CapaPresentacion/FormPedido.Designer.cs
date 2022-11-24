@@ -321,6 +321,7 @@
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedido.Location = new System.Drawing.Point(11, 42);
             this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.ReadOnly = true;
             this.dgvPedido.Size = new System.Drawing.Size(454, 146);
             this.dgvPedido.TabIndex = 8;
             this.dgvPedido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellDoubleClick);

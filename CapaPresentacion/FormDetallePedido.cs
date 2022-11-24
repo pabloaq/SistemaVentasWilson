@@ -23,8 +23,8 @@ namespace CapaPresentacion
         private void listarDatosComboBoxPedido()
         {
             cmbPedidoId.DataSource = logPedido.Instancia.ListarPedido();
-            cmbPedidoId.DisplayMember = "nombreCliente";
-            cmbPedidoId.ValueMember = "PedidoId";
+            cmbPedidoId.DisplayMember = "PeidoId";
+            cmbPedidoId.ValueMember = "nombreCliente";
         }
         private void listarDatosComboBoxProducto()
         {
@@ -104,6 +104,14 @@ namespace CapaPresentacion
             }
             limpiarVariables();
             listarDetallePedido();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            FormPedido pedido = new FormPedido();
+            Hide();
+            pedido.ShowDialog();
+            Close();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_EliminarProd = new System.Windows.Forms.Button();
             this.btn_Modificarprodu = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_listaProductos = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cb_enableFecha = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_PrecioUnitario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -153,7 +153,11 @@
             this.dgv_listaProductos.Location = new System.Drawing.Point(4, 25);
             this.dgv_listaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_listaProductos.Name = "dgv_listaProductos";
+            this.dgv_listaProductos.ReadOnly = true;
             this.dgv_listaProductos.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgv_listaProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_listaProductos.RowTemplate.Height = 24;
             this.dgv_listaProductos.Size = new System.Drawing.Size(727, 250);
             this.dgv_listaProductos.TabIndex = 0;
@@ -161,7 +165,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cb_enableFecha);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txt_PrecioUnitario);
             this.panel2.Controls.Add(this.label7);
@@ -181,19 +184,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(204, 332);
             this.panel2.TabIndex = 11;
-            // 
-            // cb_enableFecha
-            // 
-            this.cb_enableFecha.AutoSize = true;
-            this.cb_enableFecha.ForeColor = System.Drawing.Color.Snow;
-            this.cb_enableFecha.Location = new System.Drawing.Point(12, 184);
-            this.cb_enableFecha.Margin = new System.Windows.Forms.Padding(2);
-            this.cb_enableFecha.Name = "cb_enableFecha";
-            this.cb_enableFecha.Size = new System.Drawing.Size(97, 17);
-            this.cb_enableFecha.TabIndex = 14;
-            this.cb_enableFecha.Text = "Habilitar Fecha";
-            this.cb_enableFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cb_enableFecha.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -229,7 +219,6 @@
             // 
             this.cb_ID_Local.FormattingEnabled = true;
             this.cb_ID_Local.Items.AddRange(new object[] {
-            "",
             "1",
             "2",
             "3"});
@@ -433,6 +422,5 @@
         private System.Windows.Forms.ComboBox cb_ID_Local;
         private System.Windows.Forms.Button btn_EliminarProd;
         private System.Windows.Forms.Button btn_Modificarprodu;
-        private System.Windows.Forms.CheckBox cb_enableFecha;
     }
 }

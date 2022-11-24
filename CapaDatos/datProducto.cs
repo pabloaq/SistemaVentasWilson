@@ -30,7 +30,9 @@ namespace CapaDatos
                 cmd = new SqlCommand("SP_Listar_Productos", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
+
                 SqlDataReader dr = cmd.ExecuteReader();
+
                 while (dr.Read())
                 {
                     entProducto Pro = new entProducto();
@@ -39,7 +41,7 @@ namespace CapaDatos
                     Pro.LocalID = Convert.ToInt32(dr["LocalID"]);
                     Pro.nombre = Convert.ToString(dr["nombre"]);
                     Pro.stock = Convert.ToInt32(dr["stock"]);
-                    Pro.precioUnitario = dr["precioUnitario"].ToString();
+                    Pro.precioUnitario = Convert.ToSingle(dr["precioUnitario"]);
                     Pro.fechaCaducidad = Convert.ToDateTime(dr["fechaCaducidad"] is DBNull ? null : dr["fechaCaducidad"]);
                     lista.Add(Pro);
                 }
@@ -62,12 +64,13 @@ namespace CapaDatos
         public bool InsertarProducto(entProducto Pro)
         {
             SqlCommand cmd = null;
-            Boolean inserta = false;
+            bool inserta = false;
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
                 cmd = new SqlCommand("SP_Insertar_Producto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+
                 cmd.Parameters.AddWithValue("@ProductoID", Pro.ProductoID);
                 cmd.Parameters.AddWithValue("@CategoriaproductoID", Pro.CategoriaproductoID);
                 cmd.Parameters.AddWithValue("@LocalID", Pro.LocalID);
@@ -75,7 +78,9 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Stock", Pro.stock);
                 cmd.Parameters.AddWithValue("@PrecioUnitario", Pro.precioUnitario);
                 cmd.Parameters.AddWithValue("@FechaCaducidad", Pro.fechaCaducidad);
+
                 cn.Open();
+
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
@@ -95,7 +100,7 @@ namespace CapaDatos
         public bool EditarProducto(entProducto Pro)
         {
             SqlCommand cmd = null;
-            Boolean edita = false;
+            bool edita = false;
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
@@ -131,7 +136,7 @@ namespace CapaDatos
         public bool EliminarProducto(entProducto Pro)
         {
             SqlCommand cmd = null;
-            Boolean delete = false;
+            bool delete = false;
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;

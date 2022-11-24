@@ -106,11 +106,11 @@
     <Compile Include="FormProducto.Designer.cs">
       <DependentUpon>FormProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenedorMetodoPago.cs">
+    <Compile Include="FormMetodoPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MantenedorMetodoPago.Designer.cs">
-      <DependentUpon>MantenedorMetodoPago.cs</DependentUpon>
+    <Compile Include="FormMetodoPago.Designer.cs">
+      <DependentUpon>FormMetodoPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="FormPagoTrabajador.resx">
       <DependentUpon>FormPagoTrabajador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorMetodoPago.resx">
-      <DependentUpon>MantenedorMetodoPago.cs</DependentUpon>
+    <EmbeddedResource Include="FormMetodoPago.resx">
+      <DependentUpon>FormMetodoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

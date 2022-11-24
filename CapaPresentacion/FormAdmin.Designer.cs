@@ -30,50 +30,107 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCategoriaMetodoPago = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnPagoTrabajador = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnProducto = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCategoria = new System.Windows.Forms.Button();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.btnCategoriaMetodoPago = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnComprobante = new System.Windows.Forms.Button();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnMetodoPago = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.panelContenedor.Controls.Add(this.panel6);
+            this.panelContenedor.Controls.Add(this.panel7);
             this.panelContenedor.Controls.Add(this.panel5);
             this.panelContenedor.Controls.Add(this.pictureBox1);
             this.panelContenedor.Controls.Add(this.btnMenu);
             this.panelContenedor.Controls.Add(this.panel4);
             this.panelContenedor.Controls.Add(this.panel3);
             this.panelContenedor.Controls.Add(this.panel2);
+            this.panelContenedor.Controls.Add(this.panel11);
             this.panelContenedor.Location = new System.Drawing.Point(1, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(230, 566);
+            this.panelContenedor.Size = new System.Drawing.Size(230, 622);
             this.panelContenedor.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.btnCategoriaMetodoPago);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(0, 401);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(253, 74);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel6.Location = new System.Drawing.Point(0, 73);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(253, 74);
+            this.panel6.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(93, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 64);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "CATEGORIA METODO DE PAGO";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnCategoriaMetodoPago
+            // 
+            this.btnCategoriaMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.btnCategoriaMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoriaMetodoPago.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoriaMetodoPago.ForeColor = System.Drawing.Color.White;
+            this.btnCategoriaMetodoPago.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoriaMetodoPago.Image")));
+            this.btnCategoriaMetodoPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategoriaMetodoPago.Location = new System.Drawing.Point(-2, -14);
+            this.btnCategoriaMetodoPago.Name = "btnCategoriaMetodoPago";
+            this.btnCategoriaMetodoPago.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCategoriaMetodoPago.Size = new System.Drawing.Size(262, 90);
+            this.btnCategoriaMetodoPago.TabIndex = 1;
+            this.btnCategoriaMetodoPago.UseVisualStyleBackColor = true;
+            this.btnCategoriaMetodoPago.Click += new System.EventHandler(this.btnCategoriaMetodoPago_Click);
             // 
             // pictureBox1
             // 
@@ -103,6 +160,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 74);
             this.panel4.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(93, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 49);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "PAGO TRABAJADOR";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPagoTrabajador
             // 
@@ -156,6 +225,18 @@
             this.panel2.Size = new System.Drawing.Size(253, 74);
             this.panel2.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(91, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 49);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "CATEGORIA PRODUCTO";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnCategoria
             // 
             this.btnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
@@ -172,64 +253,17 @@
             this.btnCategoria.UseVisualStyleBackColor = false;
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
-            // panelPrincipal
+            // label6
             // 
-            this.panelPrincipal.Location = new System.Drawing.Point(231, 27);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(952, 521);
-            this.panelPrincipal.TabIndex = 1;
-            // 
-            // btnCategoriaMetodoPago
-            // 
-            this.btnCategoriaMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
-            this.btnCategoriaMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriaMetodoPago.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoriaMetodoPago.ForeColor = System.Drawing.Color.White;
-            this.btnCategoriaMetodoPago.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoriaMetodoPago.Image")));
-            this.btnCategoriaMetodoPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoriaMetodoPago.Location = new System.Drawing.Point(-1, -13);
-            this.btnCategoriaMetodoPago.Name = "btnCategoriaMetodoPago";
-            this.btnCategoriaMetodoPago.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCategoriaMetodoPago.Size = new System.Drawing.Size(262, 90);
-            this.btnCategoriaMetodoPago.TabIndex = 1;
-            this.btnCategoriaMetodoPago.UseVisualStyleBackColor = true;
-            this.btnCategoriaMetodoPago.Click += new System.EventHandler(this.btnCategoriaMetodoPago_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 49);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "CATEGORIA PRODUCTO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
-            this.label2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(93, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 49);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "PAGO TRABAJADOR";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
-            this.label3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(92, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 64);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "CATEGORIA METODO DE PAGO";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.label6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(92, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 49);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "COMPROBANTE";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnComprobante
             // 
@@ -238,13 +272,20 @@
             this.btnComprobante.ForeColor = System.Drawing.Color.White;
             this.btnComprobante.Image = ((System.Drawing.Image)(resources.GetObject("btnComprobante.Image")));
             this.btnComprobante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComprobante.Location = new System.Drawing.Point(-4, -11);
+            this.btnComprobante.Location = new System.Drawing.Point(-5, -9);
             this.btnComprobante.Name = "btnComprobante";
             this.btnComprobante.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnComprobante.Size = new System.Drawing.Size(312, 90);
             this.btnComprobante.TabIndex = 4;
             this.btnComprobante.UseVisualStyleBackColor = false;
             this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
+            // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.Location = new System.Drawing.Point(231, 52);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(952, 558);
+            this.panelPrincipal.TabIndex = 1;
             // 
             // panel1
             // 
@@ -267,44 +308,85 @@
             this.label4.Text = "PAGO TRABAJADOR";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
+            // panel7
             // 
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.btnCategoriaMetodoPago);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(0, 401);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(253, 74);
-            this.panel5.TabIndex = 3;
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.btnMetodoPago);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel7.Location = new System.Drawing.Point(-1, 474);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(253, 74);
+            this.panel7.TabIndex = 5;
             // 
-            // panel6
+            // panel8
             // 
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.btnComprobante);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel6.Location = new System.Drawing.Point(0, 474);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(253, 74);
-            this.panel6.TabIndex = 4;
+            this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel8.Location = new System.Drawing.Point(0, 73);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(253, 74);
+            this.panel8.TabIndex = 4;
             // 
-            // label6
+            // panel9
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
-            this.label6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(93, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 49);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "COMPROBANTE";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel9.Location = new System.Drawing.Point(0, 73);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(253, 74);
+            this.panel9.TabIndex = 6;
+            // 
+            // panel10
+            // 
+            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel10.Location = new System.Drawing.Point(0, 73);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(253, 74);
+            this.panel10.TabIndex = 4;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label6);
+            this.panel11.Controls.Add(this.btnComprobante);
+            this.panel11.Location = new System.Drawing.Point(1, 547);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(230, 75);
+            this.panel11.TabIndex = 6;
+            // 
+            // btnMetodoPago
+            // 
+            this.btnMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.btnMetodoPago.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMetodoPago.ForeColor = System.Drawing.Color.White;
+            this.btnMetodoPago.Image = ((System.Drawing.Image)(resources.GetObject("btnMetodoPago.Image")));
+            this.btnMetodoPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMetodoPago.Location = new System.Drawing.Point(-3, -6);
+            this.btnMetodoPago.Name = "btnMetodoPago";
+            this.btnMetodoPago.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnMetodoPago.Size = new System.Drawing.Size(312, 90);
+            this.btnMetodoPago.TabIndex = 5;
+            this.btnMetodoPago.UseVisualStyleBackColor = false;
+            this.btnMetodoPago.Click += new System.EventHandler(this.btnMetodoPago_Click);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(7)))));
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(92, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 49);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "METODO DE PAGO";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1195, 572);
+            this.ClientSize = new System.Drawing.Size(1195, 654);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
@@ -312,14 +394,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelContenedor.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,5 +430,12 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnMetodoPago;
+        private System.Windows.Forms.Panel panel11;
     }
 }

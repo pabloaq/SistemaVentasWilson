@@ -58,5 +58,14 @@ namespace CapaPresentacion
             panelPrincipal.Controls.Add(form);
             form.Show();
         }
+
+        private void btnMetodoPago_Click(object sender, EventArgs e)
+        {
+            FormMetodoPago form = new FormMetodoPago();
+            form.TopLevel = false;
+            form.Location = new Point((panelPrincipal.Width - form.Width) / 2, (panelPrincipal.Height - form.Height) / 2);
+            panelPrincipal.Controls.Add(form);
+            form.Show();
+        }
     }
 }

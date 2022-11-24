@@ -144,10 +144,10 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(202, 427);
-            this.txtTotal.Multiline = true;
+            this.txtTotal.Location = new System.Drawing.Point(200, 428);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(81, 24);
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(81, 20);
             this.txtTotal.TabIndex = 13;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -168,6 +168,7 @@
             this.cbxIdPedido.Name = "cbxIdPedido";
             this.cbxIdPedido.Size = new System.Drawing.Size(100, 21);
             this.cbxIdPedido.TabIndex = 19;
+            this.cbxIdPedido.SelectedIndexChanged += new System.EventHandler(this.cbxIdPedido_SelectedIndexChanged);
             // 
             // cbxMetodoPago
             // 
@@ -176,7 +177,6 @@
             this.cbxMetodoPago.Name = "cbxMetodoPago";
             this.cbxMetodoPago.Size = new System.Drawing.Size(100, 21);
             this.cbxMetodoPago.TabIndex = 20;
-            
             // 
             // cbxIdLocal
             // 

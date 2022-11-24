@@ -25,6 +25,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
                 cmd = new SqlCommand("pa_insert_comprobante", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+
                 cmd.Parameters.AddWithValue("@LocalID", comprobante.LocalID);
                 cmd.Parameters.AddWithValue("@PedidoID", comprobante.PedidoID);
                 cmd.Parameters.AddWithValue("@MetodopagoID", comprobante.MetodopagoID);
@@ -66,10 +67,11 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
                 cmd = new SqlCommand("MontoTotalPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+
                 cmd.Parameters.AddWithValue("@pedido_Id", comprobante.PedidoID);
                 SqlParameter totalPago = new SqlParameter("@TOTAL", 0);
                 totalPago.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(totalPago);
+                cmd.Parameters.Add(totalPago);  
 
                 cn.Open();
                 cmd.ExecuteNonQuery();

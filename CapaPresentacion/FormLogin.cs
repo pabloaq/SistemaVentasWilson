@@ -84,5 +84,13 @@ namespace CapaPresentacion
                 
             }
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            FormInicio form = new FormInicio();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

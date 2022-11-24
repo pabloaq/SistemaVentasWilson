@@ -67,5 +67,13 @@ namespace CapaPresentacion
             panelPrincipal.Controls.Add(form);
             form.Show();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            FormLogin form = new FormLogin();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

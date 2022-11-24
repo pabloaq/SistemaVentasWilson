@@ -40,7 +40,7 @@ namespace CapaPresentacion
             {
                 entMetodoPago MetodoPago = new entMetodoPago();
                 MetodoPago.MetodopagoID = Convert.ToInt32(txtMetodoPago.Text.Trim());
-                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.SelectedValue);
+                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.GetItemText(cbCategoriaMetodoPago.SelectedItem));
                 MetodoPago.nombre = txtNombreMetodoPago.Text;
                 MetodoPago.descripcion = txtDescripcionMetodoPago.Text;
 
@@ -62,7 +62,7 @@ namespace CapaPresentacion
                 entMetodoPago MetodoPago = new entMetodoPago();
 
                 MetodoPago.MetodopagoID = Convert.ToInt32(txtMetodoPago.Text.Trim());
-                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.SelectedValue);
+                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.SelectedItem);
                 MetodoPago.nombre = txtNombreMetodoPago.Text;
                 MetodoPago.descripcion = txtDescripcionMetodoPago.Text;
 

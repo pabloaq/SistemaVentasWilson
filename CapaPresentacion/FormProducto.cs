@@ -24,14 +24,10 @@ namespace MantenedorProducto
         private void llenarDatosComboBoxPedido()
         {
             cb_Cod_Categoria.DataSource = logCategoriaProducto.GetInstancia.ListarCategoriasProducto();
-            cb_Cod_Categoria.DisplayMember = "idCategoriaProducto";
-            cb_Cod_Categoria.ValueMember = "nombreCategoria";
+            cb_Cod_Categoria.DisplayMember = "nombreCategoria";
+            cb_Cod_Categoria.ValueMember = "idCategoriaProducto";
         }
 
-        private void llenarDatosComboBoxLocal()
-        {
-            
-        }
 
         public void ListarProducto()
         {
@@ -57,8 +53,8 @@ namespace MantenedorProducto
                 {
                     entProducto p = new entProducto();
                     p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                   //p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
-                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedValue);
+                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.GetItemText(cb_Cod_Categoria.SelectedItem));
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.GetItemText(cb_ID_Local.SelectedItem));
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
                     p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text);
@@ -98,8 +94,8 @@ namespace MantenedorProducto
                 {
                     entProducto p = new entProducto();
                     p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
-                    p.LocalID = int.Parse(cb_ID_Local.Text.Trim());
+                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.GetItemText(cb_Cod_Categoria.SelectedItem));
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.GetItemText(cb_ID_Local.SelectedItem));
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
                     p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text);

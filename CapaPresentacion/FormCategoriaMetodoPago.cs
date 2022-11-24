@@ -83,15 +83,22 @@ namespace CapaPresentacion
         {
             try
             {
-                entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
+                if (txtCodigoCatMetodoPago.Text != "")
+                {
+                    entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
 
-                catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
+                    catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
 
-                logCategoriaMetodoPago.Instancia.EliminaCategoriaMetodoPago(catMetodoPago);
+                    logCategoriaMetodoPago.Instancia.EliminaCategoriaMetodoPago(catMetodoPago);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Seleccione un registro para eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
 
             limpiarVariables();

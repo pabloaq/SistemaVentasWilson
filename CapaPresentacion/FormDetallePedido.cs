@@ -23,8 +23,8 @@ namespace CapaPresentacion
         private void listarDatosComboBoxPedido()
         {
             cmbPedidoId.DataSource = logPedido.Instancia.ListarPedido();
-            cmbPedidoId.DisplayMember = "PeidoId";
-            cmbPedidoId.ValueMember = "nombreCliente";
+            cmbPedidoId.DisplayMember = "nombreCliente";
+            cmbPedidoId.ValueMember = "PeidoId";
         }
         private void listarDatosComboBoxProducto()
         {
@@ -58,9 +58,9 @@ namespace CapaPresentacion
             try
             {
                 entDetallePedido detPedido = new entDetallePedido();
-                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.SelectedValue);
-                detPedido.ProductoId= Convert.ToInt32(cmbProductoId.SelectedValue);
-                detPedido.cantidad = int.Parse(nudCantidad.Value.ToString());
+                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.GetItemText(cmbPedidoId.SelectedItem));
+                detPedido.ProductoId = Convert.ToInt32(cmbProductoId.SelectedValue);
+                detPedido.cantidad = Convert.ToInt32(nudCantidad.Value);
                 logDetallePedido.Instancia.InsertaDetallePedido(detPedido);
             }
             catch (Exception ex)
@@ -76,8 +76,8 @@ namespace CapaPresentacion
             try
             {
                 entDetallePedido detPedido = new entDetallePedido();
-                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.SelectedValue);
-                detPedido.ProductoId = Convert.ToInt32(cmbProductoId.SelectedValue);
+                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.GetItemText(cmbPedidoId.SelectedItem));
+                detPedido.ProductoId = Convert.ToInt32(cmbProductoId.GetItemText(cmbProductoId.SelectedItem));
                 detPedido.cantidad = int.Parse(nudCantidad.Value.ToString());
                 logDetallePedido.Instancia.EditaDetallePedido(detPedido);
             }

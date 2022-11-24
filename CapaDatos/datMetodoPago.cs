@@ -144,7 +144,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("pa_eliminar_metodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@@MetodopagoID", cate.MetodopagoID);
+                cmd.Parameters.AddWithValue("@MetodopagoID", cate.MetodopagoID);
 
                 cn.Open();
 

@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbCategoriaMetodoPago = new System.Windows.Forms.ComboBox();
             this.txtMetodoPago = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnModificarMetodoPago = new System.Windows.Forms.Button();
             this.btnEliminarMetodoPago = new System.Windows.Forms.Button();
             this.btnAgregarMetodoPago = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.dgvMetodoPago = new System.Windows.Forms.DataGridView();
             this.txtDescripcionMetodoPago = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +44,6 @@
             this.txtNombreMetodoPago = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbCategoriaMetodoPago = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +58,7 @@
             this.panel1.Controls.Add(this.btnModificarMetodoPago);
             this.panel1.Controls.Add(this.btnEliminarMetodoPago);
             this.panel1.Controls.Add(this.btnAgregarMetodoPago);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Controls.Add(this.dgvMetodoPago);
             this.panel1.Controls.Add(this.txtDescripcionMetodoPago);
             this.panel1.Controls.Add(this.label3);
@@ -66,8 +67,16 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-3, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 397);
+            this.panel1.Size = new System.Drawing.Size(772, 397);
             this.panel1.TabIndex = 1;
+            // 
+            // cbCategoriaMetodoPago
+            // 
+            this.cbCategoriaMetodoPago.FormattingEnabled = true;
+            this.cbCategoriaMetodoPago.Location = new System.Drawing.Point(22, 99);
+            this.cbCategoriaMetodoPago.Name = "cbCategoriaMetodoPago";
+            this.cbCategoriaMetodoPago.Size = new System.Drawing.Size(226, 21);
+            this.cbCategoriaMetodoPago.TabIndex = 14;
             // 
             // txtMetodoPago
             // 
@@ -92,7 +101,7 @@
             this.btnModificarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btnModificarMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarMetodoPago.Location = new System.Drawing.Point(661, 335);
+            this.btnModificarMetodoPago.Location = new System.Drawing.Point(636, 336);
             this.btnModificarMetodoPago.Name = "btnModificarMetodoPago";
             this.btnModificarMetodoPago.Size = new System.Drawing.Size(108, 36);
             this.btnModificarMetodoPago.TabIndex = 10;
@@ -105,7 +114,7 @@
             this.btnEliminarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btnEliminarMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMetodoPago.Location = new System.Drawing.Point(492, 335);
+            this.btnEliminarMetodoPago.Location = new System.Drawing.Point(455, 335);
             this.btnEliminarMetodoPago.Name = "btnEliminarMetodoPago";
             this.btnEliminarMetodoPago.Size = new System.Drawing.Size(100, 36);
             this.btnEliminarMetodoPago.TabIndex = 9;
@@ -118,7 +127,7 @@
             this.btnAgregarMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btnAgregarMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMetodoPago.Location = new System.Drawing.Point(314, 335);
+            this.btnAgregarMetodoPago.Location = new System.Drawing.Point(270, 335);
             this.btnAgregarMetodoPago.Name = "btnAgregarMetodoPago";
             this.btnAgregarMetodoPago.Size = new System.Drawing.Size(94, 36);
             this.btnAgregarMetodoPago.TabIndex = 8;
@@ -126,25 +135,36 @@
             this.btnAgregarMetodoPago.UseVisualStyleBackColor = false;
             this.btnAgregarMetodoPago.Click += new System.EventHandler(this.btnAgregarMetodoPago_Click);
             // 
-            // button1
+            // btnAtras
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(722, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 31);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Atras";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(675, 9);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(69, 31);
+            this.btnAtras.TabIndex = 7;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvMetodoPago
             // 
+            this.dgvMetodoPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMetodoPago.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMetodoPago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMetodoPago.Location = new System.Drawing.Point(270, 46);
             this.dgvMetodoPago.Name = "dgvMetodoPago";
-            this.dgvMetodoPago.Size = new System.Drawing.Size(521, 283);
+            this.dgvMetodoPago.ReadOnly = true;
+            this.dgvMetodoPago.Size = new System.Drawing.Size(474, 283);
             this.dgvMetodoPago.TabIndex = 6;
             // 
             // txtDescripcionMetodoPago
@@ -205,20 +225,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // cbCategoriaMetodoPago
-            // 
-            this.cbCategoriaMetodoPago.FormattingEnabled = true;
-            this.cbCategoriaMetodoPago.Location = new System.Drawing.Point(22, 99);
-            this.cbCategoriaMetodoPago.Name = "cbCategoriaMetodoPago";
-            this.cbCategoriaMetodoPago.Size = new System.Drawing.Size(226, 21);
-            this.cbCategoriaMetodoPago.TabIndex = 14;
-            // 
             // FormMetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(767, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -240,7 +252,7 @@
         private System.Windows.Forms.Button btnModificarMetodoPago;
         private System.Windows.Forms.Button btnEliminarMetodoPago;
         private System.Windows.Forms.Button btnAgregarMetodoPago;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.DataGridView dgvMetodoPago;
         private System.Windows.Forms.TextBox txtDescripcionMetodoPago;
         private System.Windows.Forms.Label label3;

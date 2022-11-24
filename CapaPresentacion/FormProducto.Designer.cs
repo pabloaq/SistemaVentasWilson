@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_EliminarProd = new System.Windows.Forms.Button();
             this.btn_Modificarprodu = new System.Windows.Forms.Button();
@@ -149,15 +149,17 @@
             // 
             // dgv_listaProductos
             // 
+            this.dgv_listaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_listaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_listaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_listaProductos.Location = new System.Drawing.Point(4, 25);
             this.dgv_listaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_listaProductos.Name = "dgv_listaProductos";
             this.dgv_listaProductos.ReadOnly = true;
             this.dgv_listaProductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgv_listaProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgv_listaProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_listaProductos.RowTemplate.Height = 24;
             this.dgv_listaProductos.Size = new System.Drawing.Size(727, 250);
             this.dgv_listaProductos.TabIndex = 0;

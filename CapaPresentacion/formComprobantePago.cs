@@ -25,15 +25,15 @@ namespace CapaPresentacion
         private void listarPedidosIdComboBox()
         {
             cbxIdPedido.DataSource = logPedido.Instancia.ListarPedido();
-            cbxIdPedido.DisplayMember = "PeidoId";
-            cbxIdPedido.ValueMember = "nombreCliente";
+            cbxIdPedido.DisplayMember = "nombreCliente";
+            cbxIdPedido.ValueMember = "PeidoId";
         }
 
         private void listarMetodoPagoComboBox()
         {
             cbxMetodoPago.DataSource = logCategoriaMetodoPago.Instancia.ListarCategoriaMetodoPago();
-            cbxMetodoPago.DisplayMember = "idCategoriaMetodoPago";
-            cbxMetodoPago.ValueMember = "nombreCategoria";
+            cbxMetodoPago.DisplayMember = "nombreCategoria";
+            cbxMetodoPago.ValueMember = "idCategoriaMetodoPago";
         }
 
         private void btnRealizarComprobante_Click(object sender, EventArgs e)
@@ -56,6 +56,7 @@ namespace CapaPresentacion
                     pedido.PeidoId = comprobante.PedidoID;
                     logPedido.Instancia.DeshabilitarPedido(pedido);
                     MessageBox.Show("Comprobante generado correctamente");
+                    this.Close();
                 }
                 else
                 {
@@ -69,7 +70,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Error al generar el comprobante" + ex);
             }
 
-           // LimpiarVariables();
+            // LimpiarVariables();
             //gbCliente.Enabled = false;
             //ListarClientes();
         }
@@ -77,6 +78,13 @@ namespace CapaPresentacion
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbxIdPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            entComprobante comprobante = new entComprobante();
+            comprobante.PedidoID = Convert.ToInt32(cbxIdPedido.SelectedValue);
+            lbMontoTotal.Text = logComprobante.GetInstancia.VerificarMontoTotal(comprobante).ToString();
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)

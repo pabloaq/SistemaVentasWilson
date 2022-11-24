@@ -53,7 +53,7 @@ namespace MantenedorProducto
                 {
                     entProducto p = new entProducto();
                     p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.GetItemText(cb_Cod_Categoria.SelectedItem));
+                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
                     p.LocalID = Convert.ToInt32(cb_ID_Local.GetItemText(cb_ID_Local.SelectedItem));
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());

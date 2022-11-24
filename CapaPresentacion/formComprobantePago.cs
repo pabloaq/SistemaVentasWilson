@@ -1,6 +1,5 @@
 ﻿using CapaEntidad;
 using CapaLogica;
-
 using System;
 using System.Windows.Forms;
 
@@ -70,7 +69,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Error al generar el comprobante" + ex);
             }
 
-           // LimpiarVariables();
+            // LimpiarVariables();
             //gbCliente.Enabled = false;
             //ListarClientes();
         }
@@ -85,7 +84,7 @@ namespace CapaPresentacion
             entComprobante comprobante = new entComprobante();
             comprobante.PedidoID = Convert.ToInt32(cbxIdPedido.SelectedValue);
 
-            txtTotal.Text = logComprobante.GetInstancia.VerificarMontoTotal(comprobante).ToString();
+            lbMontoTotal.Text = logComprobante.GetInstancia.VerificarMontoTotal(comprobante).ToString();
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)

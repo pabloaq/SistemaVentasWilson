@@ -51,7 +51,6 @@
             this.cmbProductoId = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnPedir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDetPedido = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
@@ -339,7 +338,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Controls.Add(this.btnPedir);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.dgvDetPedido);
             this.panel5.Location = new System.Drawing.Point(255, 0);
@@ -357,22 +355,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnPedir
-            // 
-            this.btnPedir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPedir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btnPedir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPedir.FlatAppearance.BorderSize = 0;
-            this.btnPedir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedir.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPedir.Location = new System.Drawing.Point(366, 300);
-            this.btnPedir.Name = "btnPedir";
-            this.btnPedir.Size = new System.Drawing.Size(106, 29);
-            this.btnPedir.TabIndex = 3;
-            this.btnPedir.Text = "Pedir";
-            this.btnPedir.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -459,7 +441,6 @@
         private System.Windows.Forms.ComboBox cmbProductoId;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnPedir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDetPedido;
         private System.Windows.Forms.Button btnLimpiar;

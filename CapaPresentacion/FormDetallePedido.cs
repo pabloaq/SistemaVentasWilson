@@ -58,7 +58,7 @@ namespace CapaPresentacion
             try
             {
                 entDetallePedido detPedido = new entDetallePedido();
-                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.GetItemText(cmbPedidoId.SelectedItem));
+                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.SelectedValue);
                 detPedido.ProductoId = Convert.ToInt32(cmbProductoId.SelectedValue);
                 detPedido.cantidad = Convert.ToInt32(nudCantidad.Value);
                 logDetallePedido.Instancia.InsertaDetallePedido(detPedido);

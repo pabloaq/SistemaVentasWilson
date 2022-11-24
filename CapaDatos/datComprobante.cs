@@ -23,7 +23,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.GetInstancia.Conectar;
-                cmd = new SqlCommand("pa_insert_comprobante", cn);
+                cmd = new SqlCommand("paInsertcomprobante", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@LocalID", comprobante.LocalID);
                 cmd.Parameters.AddWithValue("@PedidoID", comprobante.PedidoID);

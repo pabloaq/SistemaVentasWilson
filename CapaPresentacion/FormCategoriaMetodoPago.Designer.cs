@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_1 = new System.Windows.Forms.Label();
             this.btn_AgregarCatMetodoPago = new System.Windows.Forms.Button();
             this.lbl_2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             // 
             this.btn_AgregarCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btn_AgregarCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarCatMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AgregarCatMetodoPago.ForeColor = System.Drawing.Color.Black;
             this.btn_AgregarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_AgregarCatMetodoPago.Location = new System.Drawing.Point(479, 242);
@@ -114,7 +114,7 @@
             // 
             this.btn_ModificarCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btn_ModificarCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ModificarCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ModificarCatMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ModificarCatMetodoPago.ForeColor = System.Drawing.Color.Black;
             this.btn_ModificarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_ModificarCatMetodoPago.Location = new System.Drawing.Point(571, 242);
@@ -129,7 +129,7 @@
             // 
             this.btn_EliminarCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btn_EliminarCatMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarCatMetodoPago.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarCatMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EliminarCatMetodoPago.ForeColor = System.Drawing.Color.Black;
             this.btn_EliminarCatMetodoPago.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_EliminarCatMetodoPago.Location = new System.Drawing.Point(663, 242);
@@ -144,6 +144,7 @@
             // 
             this.gbListaCatMetodoPago.Controls.Add(this.dgvCatMetodoPago);
             this.gbListaCatMetodoPago.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gbListaCatMetodoPago.ForeColor = System.Drawing.Color.Black;
             this.gbListaCatMetodoPago.Location = new System.Drawing.Point(299, 12);
             this.gbListaCatMetodoPago.Name = "gbListaCatMetodoPago";
             this.gbListaCatMetodoPago.Size = new System.Drawing.Size(450, 220);
@@ -155,26 +156,26 @@
             // 
             this.dgvCatMetodoPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCatMetodoPago.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatMetodoPago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCatMetodoPago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCatMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatMetodoPago.Location = new System.Drawing.Point(6, 16);
             this.dgvCatMetodoPago.Name = "dgvCatMetodoPago";
             this.dgvCatMetodoPago.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatMetodoPago.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCatMetodoPago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCatMetodoPago.Size = new System.Drawing.Size(438, 198);
             this.dgvCatMetodoPago.TabIndex = 0;
             this.dgvCatMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatMetodoPago_CellContentClick);
@@ -182,6 +183,7 @@
             // txtCodigoCatMetodoPago
             // 
             this.txtCodigoCatMetodoPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
+            this.txtCodigoCatMetodoPago.Enabled = false;
             this.txtCodigoCatMetodoPago.ForeColor = System.Drawing.Color.White;
             this.txtCodigoCatMetodoPago.Location = new System.Drawing.Point(12, 26);
             this.txtCodigoCatMetodoPago.Name = "txtCodigoCatMetodoPago";
@@ -192,7 +194,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnSalir.Location = new System.Drawing.Point(12, 242);

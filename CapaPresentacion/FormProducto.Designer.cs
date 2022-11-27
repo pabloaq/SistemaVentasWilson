@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_EliminarProd = new System.Windows.Forms.Button();
             this.btn_Modificarprodu = new System.Windows.Forms.Button();
-            this.btn_consultaStock = new System.Windows.Forms.Button();
+            this.btn_Limpiar = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_listaProductos = new System.Windows.Forms.DataGridView();
@@ -67,7 +67,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(105)))), ((int)(((byte)(58)))));
             this.panel1.Controls.Add(this.btn_EliminarProd);
             this.panel1.Controls.Add(this.btn_Modificarprodu);
-            this.panel1.Controls.Add(this.btn_consultaStock);
+            this.panel1.Controls.Add(this.btn_Limpiar);
             this.panel1.Controls.Add(this.btn_agregar);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel2);
@@ -105,18 +105,19 @@
             this.btn_Modificarprodu.UseVisualStyleBackColor = false;
             this.btn_Modificarprodu.Click += new System.EventHandler(this.btn_Modificarprodu_Click);
             // 
-            // btn_consultaStock
+            // btn_Limpiar
             // 
-            this.btn_consultaStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
-            this.btn_consultaStock.FlatAppearance.BorderSize = 0;
-            this.btn_consultaStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultaStock.Location = new System.Drawing.Point(458, 297);
-            this.btn_consultaStock.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_consultaStock.Name = "btn_consultaStock";
-            this.btn_consultaStock.Size = new System.Drawing.Size(74, 28);
-            this.btn_consultaStock.TabIndex = 14;
-            this.btn_consultaStock.Text = "Stock";
-            this.btn_consultaStock.UseVisualStyleBackColor = false;
+            this.btn_Limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(159)))), ((int)(((byte)(7)))));
+            this.btn_Limpiar.FlatAppearance.BorderSize = 0;
+            this.btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Limpiar.Location = new System.Drawing.Point(458, 297);
+            this.btn_Limpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Limpiar.Name = "btn_Limpiar";
+            this.btn_Limpiar.Size = new System.Drawing.Size(74, 28);
+            this.btn_Limpiar.TabIndex = 14;
+            this.btn_Limpiar.Text = "Limpiar";
+            this.btn_Limpiar.UseVisualStyleBackColor = false;
+            this.btn_Limpiar.Click += new System.EventHandler(this.btn_Limpiar_Click);
             // 
             // btn_agregar
             // 
@@ -157,9 +158,9 @@
             this.dgv_listaProductos.Name = "dgv_listaProductos";
             this.dgv_listaProductos.ReadOnly = true;
             this.dgv_listaProductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgv_listaProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgv_listaProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_listaProductos.RowTemplate.Height = 24;
             this.dgv_listaProductos.Size = new System.Drawing.Size(727, 250);
             this.dgv_listaProductos.TabIndex = 0;
@@ -282,6 +283,7 @@
             // 
             // txt_codProducto
             // 
+            this.txt_codProducto.Enabled = false;
             this.txt_codProducto.Location = new System.Drawing.Point(10, 26);
             this.txt_codProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_codProducto.Name = "txt_codProducto";
@@ -416,7 +418,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btn_consultaStock;
+        private System.Windows.Forms.Button btn_Limpiar;
         private System.Windows.Forms.ComboBox cb_Cod_Categoria;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_PrecioUnitario;

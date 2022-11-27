@@ -17,8 +17,8 @@ namespace CapaPresentacion
         private void llenarComboBoxCategoriaMetodoPago()
         {
             cbCategoriaMetodoPago.DataSource = logCategoriaMetodoPago.Instancia.ListarCategoriaMetodoPago();
-            cbCategoriaMetodoPago.DisplayMember = "idCategoriaMetodoPago";
-            cbCategoriaMetodoPago.ValueMember = "nombreCategoria";
+            cbCategoriaMetodoPago.DisplayMember = "nombreCategoria";
+            cbCategoriaMetodoPago.ValueMember = "idCategoriaMetodoPago";
         }
 
 
@@ -39,8 +39,8 @@ namespace CapaPresentacion
             try
             {
                 entMetodoPago MetodoPago = new entMetodoPago();
-                MetodoPago.MetodopagoID = Convert.ToInt32(txtMetodoPago.Text.Trim());
-                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.GetItemText(cbCategoriaMetodoPago.SelectedItem));
+
+                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.SelectedValue);
                 MetodoPago.nombre = txtNombreMetodoPago.Text;
                 MetodoPago.descripcion = txtDescripcionMetodoPago.Text;
 
@@ -62,7 +62,7 @@ namespace CapaPresentacion
                 entMetodoPago MetodoPago = new entMetodoPago();
 
                 MetodoPago.MetodopagoID = Convert.ToInt32(txtMetodoPago.Text.Trim());
-                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.SelectedItem);
+                MetodoPago.CategoriametodopagoID = Convert.ToInt32(cbCategoriaMetodoPago.SelectedValue);
                 MetodoPago.nombre = txtNombreMetodoPago.Text;
                 MetodoPago.descripcion = txtDescripcionMetodoPago.Text;
 
@@ -101,7 +101,7 @@ namespace CapaPresentacion
             DataGridViewRow filaActual = dgvMetodoPago.Rows[e.RowIndex];
 
             txtMetodoPago.Text = filaActual.Cells[0].Value.ToString();
-            cbCategoriaMetodoPago.Text = filaActual.Cells[1].Value.ToString();
+            cbCategoriaMetodoPago.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString())-1;
             txtNombreMetodoPago.Text = filaActual.Cells[2].Value.ToString();
             txtDescripcionMetodoPago.Text = filaActual.Cells[3].Value.ToString();
         }

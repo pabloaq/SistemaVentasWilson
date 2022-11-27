@@ -71,7 +71,6 @@ namespace CapaDatos
                 cmd = new SqlCommand("SP_Insertar_Producto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@ProductoID", Pro.ProductoID);
                 cmd.Parameters.AddWithValue("@CategoriaproductoID", Pro.CategoriaproductoID);
                 cmd.Parameters.AddWithValue("@LocalID", Pro.LocalID);
                 cmd.Parameters.AddWithValue("@Nombre", Pro.nombre);

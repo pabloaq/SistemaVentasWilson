@@ -41,7 +41,7 @@ namespace CapaPresentacion
         {
             try
             {
-                if (txtCodigoCategoria.Text != "" && txtNombreCategoria.Text != "" && txtDescripcionCategoria.Text != "")
+                if (txtNombreCategoria.Text != "" && txtDescripcionCategoria.Text != "")
                 {
                     entCategoriaProducto cate = new entCategoriaProducto
                     {

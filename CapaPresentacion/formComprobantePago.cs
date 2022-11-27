@@ -68,10 +68,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error al generar el comprobante" + ex);
             }
-
-            // LimpiarVariables();
-            //gbCliente.Enabled = false;
-            //ListarClientes();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

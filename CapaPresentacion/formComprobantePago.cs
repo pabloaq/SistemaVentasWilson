@@ -11,7 +11,7 @@ namespace CapaPresentacion
         public formComprobantePago()
         {
             InitializeComponent();
-            txtCodigoCom.Enabled = false;
+            //txtCodigoCom.Enabled = false;
             listarMetodoPagoComboBox();
             listarPedidosIdComboBox();
         }

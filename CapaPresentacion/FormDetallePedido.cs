@@ -36,7 +36,7 @@ namespace CapaPresentacion
         private void dgvDetPedido_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvDetPedido.Rows[e.RowIndex];
-            cmbPedidoId.SelectedIndex = 0; //int.Parse(filaActual.Cells[0].Value.ToString())-1;
+            cmbPedidoId.SelectedIndex = 0;
             cmbProductoId.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString())-1;
             nudCantidad.Value = int.Parse(filaActual.Cells[2].Value.ToString());
         }

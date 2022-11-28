@@ -36,7 +36,7 @@ namespace CapaPresentacion
         private void dgvDetPedido_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvDetPedido.Rows[e.RowIndex];
-            cmbPedidoId.SelectedIndex = int.Parse(filaActual.Cells[0].Value.ToString())-1;
+            cmbPedidoId.SelectedIndex = 0;
             cmbProductoId.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString())-1;
             nudCantidad.Value = int.Parse(filaActual.Cells[2].Value.ToString());
         }
@@ -76,8 +76,8 @@ namespace CapaPresentacion
             try
             {
                 entDetallePedido detPedido = new entDetallePedido();
-                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.GetItemText(cmbPedidoId.SelectedItem));
-                detPedido.ProductoId = Convert.ToInt32(cmbProductoId.GetItemText(cmbProductoId.SelectedItem));
+                detPedido.PedidoId = Convert.ToInt32(cmbPedidoId.SelectedValue);
+                detPedido.ProductoId = Convert.ToInt32(cmbProductoId.SelectedValue);
                 detPedido.cantidad = int.Parse(nudCantidad.Value.ToString());
                 logDetallePedido.Instancia.EditaDetallePedido(detPedido);
             }

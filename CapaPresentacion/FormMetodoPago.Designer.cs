@@ -80,6 +80,7 @@
             // 
             // txtMetodoPago
             // 
+            this.txtMetodoPago.Enabled = false;
             this.txtMetodoPago.Location = new System.Drawing.Point(22, 46);
             this.txtMetodoPago.Name = "txtMetodoPago";
             this.txtMetodoPago.Size = new System.Drawing.Size(231, 20);

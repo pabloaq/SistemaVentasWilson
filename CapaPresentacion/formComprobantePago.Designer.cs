@@ -31,12 +31,10 @@
             this.btnClose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCodigoCom = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxIdPedido = new System.Windows.Forms.ComboBox();
@@ -84,16 +82,6 @@
             this.panel2.TabIndex = 1;
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Codigo N° :";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -133,16 +121,6 @@
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 7;
             this.label7.Text = "Total :";
-            // 
-            // txtCodigoCom
-            // 
-            this.txtCodigoCom.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtCodigoCom.Location = new System.Drawing.Point(213, 106);
-            this.txtCodigoCom.Multiline = true;
-            this.txtCodigoCom.Name = "txtCodigoCom";
-            this.txtCodigoCom.Size = new System.Drawing.Size(100, 24);
-            this.txtCodigoCom.TabIndex = 8;
-            this.txtCodigoCom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTotal
             // 
@@ -250,12 +228,10 @@
             this.Controls.Add(this.cbxIdPedido);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.txtCodigoCom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -274,12 +250,10 @@
         private System.Windows.Forms.Label btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCodigoCom;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbxIdPedido;

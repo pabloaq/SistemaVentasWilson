@@ -41,11 +41,10 @@ namespace CapaPresentacion
         {
             try
             {
-                if (txtCodigoCategoria.Text != "" && txtNombreCategoria.Text != "" && txtDescripcionCategoria.Text != "")
+                if (txtNombreCategoria.Text != "" && txtDescripcionCategoria.Text != "")
                 {
                     entCategoriaProducto cate = new entCategoriaProducto
                     {
-                        idCategoriaProducto = Convert.ToInt32(txtCodigoCategoria.Text.Trim()),
                         nombreCategoria = txtNombreCategoria.Text,
                         descripcion = txtDescripcionCategoria.Text
                     };

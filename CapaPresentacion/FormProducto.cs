@@ -49,15 +49,14 @@ namespace MantenedorProducto
             //insertar
             try
             {
-                if (txt_codProducto.Text != "" && txt_nomProducto.Text != "" && txt_stockProducto.Text != "" && txt_PrecioUnitario.Text != "")
+                if (txt_nomProducto.Text != "" && txt_stockProducto.Text != "" && txt_PrecioUnitario.Text != "")
                 {
                     entProducto p = new entProducto();
-                    p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
                     p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
-                    p.LocalID = Convert.ToInt32(cb_ID_Local.GetItemText(cb_ID_Local.SelectedItem));
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedItem);
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
-                    p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text);
+                    p.precioUnitario = float.Parse(txt_PrecioUnitario.Text.Trim());
                     p.fechaCaducidad = dt_fechaCaducidad.Value;
 
                     logProducto.GetInstancia.InsertaProducto(p);
@@ -78,7 +77,7 @@ namespace MantenedorProducto
             DataGridViewRow filaActual = dgv_listaProductos.Rows[e.RowIndex]; 
 
             txt_codProducto.Text = filaActual.Cells[0].Value.ToString();
-            cb_Cod_Categoria.Text = filaActual.Cells[1].Value.ToString();
+            cb_Cod_Categoria.SelectedIndex = int.Parse(filaActual.Cells[1].Value.ToString())-1;
             cb_ID_Local.Text = filaActual.Cells[2].Value.ToString();
             txt_nomProducto.Text = filaActual.Cells[3].Value.ToString();
             txt_stockProducto.Text = filaActual.Cells[4].Value.ToString();
@@ -94,11 +93,11 @@ namespace MantenedorProducto
                 {
                     entProducto p = new entProducto();
                     p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
-                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.GetItemText(cb_Cod_Categoria.SelectedItem));
-                    p.LocalID = Convert.ToInt32(cb_ID_Local.GetItemText(cb_ID_Local.SelectedItem));
+                    p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedItem);
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
-                    p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text);
+                    p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text.Trim());
                     p.fechaCaducidad = dt_fechaCaducidad.Value;
 
                     logProducto.GetInstancia.EditaProducto(p);
@@ -145,6 +144,11 @@ namespace MantenedorProducto
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_Limpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarVariables();
         }
     }
 }

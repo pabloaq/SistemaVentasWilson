@@ -94,38 +94,5 @@ namespace CapaDatos
 
         #endregion Insertar Pago Trabajador
 
-
-        //#region Eliminar Pago Trabajador
-        
-        //public bool EliminarPagoTrabajador(entPagoTrabajador entPago)
-        //{
-        //    SqlCommand cmd = null;
-
-        //    try
-        //    {
-        //        SqlConnection cn = Conexion.GetInstancia.Conectar;
-        //        cmd = new SqlCommand("pa_eliminar_pago_trabajador", cn);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Parameters.AddWithValue("@FichaID", entPago.FichaID);
-
-        //        cn.Open();
-
-        //        if(cmd.ExecuteNonQuery() > 0) { return true; };
-
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        cmd.Connection.Close();
-        //    }
-
-        //    return false;
-        //}
-
-        //#endregion Eliminar Pago Trabajador
-
     }
 }

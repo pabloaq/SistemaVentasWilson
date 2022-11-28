@@ -29,10 +29,9 @@ namespace CapaPresentacion
         {
             try
             {
-                if (txtCodigoCatMetodoPago.Text != "" && txtNombreCatMetodoPago.Text != "")
+                if (txtNombreCatMetodoPago.Text != "")
                 {
                     entCategoriaMetodoPago catMetodoPago = new entCategoriaMetodoPago();
-                    catMetodoPago.idCategoriaMetodoPago = Convert.ToInt32(txtCodigoCatMetodoPago.Text.Trim());
                     catMetodoPago.nombreCategoria = txtNombreCatMetodoPago.Text;
                     catMetodoPago.descripcion = txtDescripcionCatMetodoPago.Text;
                     logCategoriaMetodoPago.Instancia.InsertaCategoriaMetodoPago(catMetodoPago);

@@ -14,6 +14,7 @@ namespace CapaPresentacion
             txtCodigoCom.Enabled = false;
             listarMetodoPagoComboBox();
             listarPedidosIdComboBox();
+            llenarDatosComboBoxLocal();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -34,7 +35,13 @@ namespace CapaPresentacion
             cbxMetodoPago.DisplayMember = "nombreCategoria";
             cbxMetodoPago.ValueMember = "idCategoriaMetodoPago";
         }
+        private void llenarDatosComboBoxLocal()
+        {
+            cbxIdLocal.DataSource = logLocal.GetInstancia.ListarLocal();
+            cbxIdLocal.DisplayMember = "nombre";
+            cbxIdLocal.ValueMember = "idLocal";
 
+        }
         private void btnRealizarComprobante_Click(object sender, EventArgs e)
         {
             try

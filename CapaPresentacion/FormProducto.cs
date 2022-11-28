@@ -1,13 +1,6 @@
 ﻿using CapaEntidad;
 using CapaLogica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MantenedorProducto
@@ -18,6 +11,7 @@ namespace MantenedorProducto
         {
             InitializeComponent();
             llenarDatosComboBoxPedido();
+            llenarDatosComboBoxLocal();
             ListarProducto();
         }
 
@@ -28,7 +22,13 @@ namespace MantenedorProducto
             cb_Cod_Categoria.ValueMember = "idCategoriaProducto";
         }
 
+        private void llenarDatosComboBoxLocal()
+        {
+            cb_ID_Local.DataSource = logLocal.GetInstancia.ListarLocal();
+            cb_ID_Local.DisplayMember = "nombre";
+            cb_ID_Local.ValueMember = "idLocal";
 
+        }
         public void ListarProducto()
         {
             dgv_listaProductos.DataSource = logProducto.GetInstancia.ListarProducto();

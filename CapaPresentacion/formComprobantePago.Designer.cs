@@ -148,7 +148,6 @@
             // 
             this.txtTotal.Location = new System.Drawing.Point(200, 428);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(81, 20);
             this.txtTotal.TabIndex = 13;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -183,21 +182,6 @@
             // cbxIdLocal
             // 
             this.cbxIdLocal.FormattingEnabled = true;
-            this.cbxIdLocal.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
             this.cbxIdLocal.Location = new System.Drawing.Point(213, 300);
             this.cbxIdLocal.Name = "cbxIdLocal";
             this.cbxIdLocal.Size = new System.Drawing.Size(100, 21);

@@ -210,21 +210,6 @@
             // cbxIdLocal
             // 
             this.cbxIdLocal.FormattingEnabled = true;
-            this.cbxIdLocal.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
             this.cbxIdLocal.Location = new System.Drawing.Point(213, 298);
             this.cbxIdLocal.Name = "cbxIdLocal";
             this.cbxIdLocal.Size = new System.Drawing.Size(100, 21);

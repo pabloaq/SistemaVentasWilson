@@ -53,7 +53,7 @@ namespace MantenedorProducto
                 {
                     entProducto p = new entProducto();
                     p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
-                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedItem);
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedValue);
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
                     p.precioUnitario = float.Parse(txt_PrecioUnitario.Text.Trim());
@@ -94,7 +94,7 @@ namespace MantenedorProducto
                     entProducto p = new entProducto();
                     p.ProductoID = int.Parse(txt_codProducto.Text.Trim());
                     p.CategoriaproductoID = Convert.ToInt32(cb_Cod_Categoria.SelectedValue);
-                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedItem);
+                    p.LocalID = Convert.ToInt32(cb_ID_Local.SelectedValue);
                     p.nombre = txt_nomProducto.Text.Trim();
                     p.stock = int.Parse(txt_stockProducto.Text.Trim());
                     p.precioUnitario = Convert.ToSingle(txt_PrecioUnitario.Text.Trim());

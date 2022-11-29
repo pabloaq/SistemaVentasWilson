@@ -39,9 +39,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPersonalID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cbIdEmpleado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagoTrabajador)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(106)))), ((int)(((byte)(58)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.cbIdEmpleado);
             this.panel1.Controls.Add(this.dgvPagoTrabajador);
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.btnAgregar);
@@ -58,7 +59,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtPersonalID);
             this.panel1.Location = new System.Drawing.Point(26, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(777, 310);
@@ -157,13 +157,6 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "ID Empleado";
             // 
-            // txtPersonalID
-            // 
-            this.txtPersonalID.Location = new System.Drawing.Point(193, 136);
-            this.txtPersonalID.Name = "txtPersonalID";
-            this.txtPersonalID.Size = new System.Drawing.Size(157, 20);
-            this.txtPersonalID.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -186,6 +179,14 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // cbIdEmpleado
+            // 
+            this.cbIdEmpleado.FormattingEnabled = true;
+            this.cbIdEmpleado.Location = new System.Drawing.Point(193, 137);
+            this.cbIdEmpleado.Name = "cbIdEmpleado";
+            this.cbIdEmpleado.Size = new System.Drawing.Size(200, 21);
+            this.cbIdEmpleado.TabIndex = 27;
             // 
             // FormPagoTrabajador
             // 
@@ -212,7 +213,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPersonalID;
         private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -220,5 +220,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DateTimePicker dpFechaRegistro;
         private System.Windows.Forms.DataGridView dgvPagoTrabajador;
+        private System.Windows.Forms.ComboBox cbIdEmpleado;
     }
 }

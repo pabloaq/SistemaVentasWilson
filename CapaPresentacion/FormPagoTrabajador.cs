@@ -10,31 +10,39 @@ namespace CapaPresentacion
         public FormPagoTrabajador()
         {
             InitializeComponent();
+            ListarComboBoxIDEmpleado();
             Listar();
         }
 
         public void Listar() => dgvPagoTrabajador.DataSource = logPagoTrabajador.GetInstancia.ListarPagoTrabajador();
+
+        private void ListarComboBoxIDEmpleado()
+        {
+            cbIdEmpleado.DataSource = logTipoPersonal.GetInstancia.ListarTipoPersonal();
+            cbIdEmpleado.DisplayMember = "nombre";
+            cbIdEmpleado.ValueMember = "TipopersonalID";
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvPagoTrabajador.Rows[e.RowIndex];
 
             dpFechaRegistro.Text = filaActual.Cells[0].Value.ToString();
-            txtPersonalID.Text = filaActual.Cells[1].Value.ToString();
+            cbIdEmpleado.Text = filaActual.Cells[1].Value.ToString();
             txtSueldo.Text = filaActual.Cells[2].Value.ToString();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtPersonalID.Text = "";
             txtSueldo.Text = "";
+            cbIdEmpleado.Text = "";
             dpFechaRegistro.Text = "";
         }
 
         public void limpiarVariables()
         {
-            txtPersonalID.Text = "";
             txtSueldo.Text = "";
+            cbIdEmpleado.Text = "";
             dpFechaRegistro.Text = "";
         }
 
@@ -44,7 +52,7 @@ namespace CapaPresentacion
             {
                 entPagoTrabajador entPago = new entPagoTrabajador
                 {
-                    PersonalID = Convert.ToInt32(txtPersonalID.Text),
+                    PersonalID = Convert.ToInt32(cbIdEmpleado.SelectedValue),
                     fechaRegistro = dpFechaRegistro.Value,
                     sueldo = Convert.ToSingle(txtSueldo.Text),
 

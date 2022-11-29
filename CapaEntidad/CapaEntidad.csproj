@@ -49,6 +49,7 @@
     <Compile Include="entPagoTrabajador.cs" />
     <Compile Include="entPedido.cs" />
     <Compile Include="entComprobante.cs" />
+    <Compile Include="entPersonal.cs" />
     <Compile Include="entProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

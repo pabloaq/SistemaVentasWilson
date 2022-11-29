@@ -10,7 +10,15 @@ namespace CapaPresentacion
         public FormPagoTrabajador()
         {
             InitializeComponent();
+            ListarComboBoxPersonal();
             Listar();
+        }
+
+        private void ListarComboBoxPersonal()
+        {
+            cbIdEmpleado.DataSource = logPersonal.GetInstancia.ListarPersonal();
+            cbIdEmpleado.DisplayMember = "nombre";
+            cbIdEmpleado.ValueMember = "PersonalId";
         }
 
         public void Listar() => dgvPagoTrabajador.DataSource = logPagoTrabajador.GetInstancia.ListarPagoTrabajador();

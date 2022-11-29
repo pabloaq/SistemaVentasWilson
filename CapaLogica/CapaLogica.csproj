@@ -49,6 +49,7 @@
     <Compile Include="logPagoTrabajador.cs" />
     <Compile Include="logPedido.cs" />
     <Compile Include="logComprobante.cs" />
+    <Compile Include="logPersonal.cs" />
     <Compile Include="logProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

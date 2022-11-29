@@ -50,6 +50,7 @@
     <Compile Include="datPagoTrabajador.cs" />
     <Compile Include="datPedido.cs" />
     <Compile Include="datComprobante.cs" />
+    <Compile Include="datPersonal.cs" />
     <Compile Include="datProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
